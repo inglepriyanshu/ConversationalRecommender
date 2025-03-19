@@ -3,9 +3,11 @@
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import { useRouter } from 'next/navigation'
 
 const ProductPage = () => {
     
+    const router = useRouter();
     const params = useParams();
     const { p_id } = params;
 
@@ -121,10 +123,16 @@ const ProductPage = () => {
 
     if (!product) return <p>Loading...</p>;
 
+    const productImage = `/thumbnail/${product.product_id}.jpeg`;
+
     return (
         <div className='flex m-10 rounded-md p-10 relative left-32 items-center' style={{ backgroundColor: "#F3F7F3", boxShadow: "2px 4px 10px rgba(0, 0, 0, 0.3)", width: "900px" }}>
             <div id='img' className='w-96 h-72 rounded-md'>
-                <img src={image} alt={product.product_title} style={{ width: "450px", height: "288px", objectFit: "cover", borderRadius: "10px" }} />
+                <img 
+                    src={productImage}
+                    alt={product.product_title} 
+                    style={{ width: "450px", height: "288px", objectFit: "cover", borderRadius: "10px" }} 
+                />
             </div>
             <div id='content' className='pl-6'>
                 <h1 className='text-2xl font-bold m-3 underline'> {product.product_title} </h1>
@@ -148,4 +156,4 @@ const ProductPage = () => {
     );
 }
 
-export default ProductPage; 
+export default ProductPage;

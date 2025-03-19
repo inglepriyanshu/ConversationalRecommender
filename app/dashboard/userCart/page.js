@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 
-const UserCart = () => {
+const CartPage = () => {
 
     const [products, setProducts] = useState([]);
     const router = useRouter()
@@ -86,39 +86,41 @@ const UserCart = () => {
                     </button>
                 </div>
             ) : (
-                <div className="w-full bg-gradient-to-r from-green-200 to-blue-200">
-                    <div className="flex flex-wrap gap-5">
-                        {products.map((product) => (
-                            <div key={product._id} className="box w-64 max-h-max pb-2 m-4 border rounded-md"
-                                style={{ backgroundColor: "#FFFFFF", boxShadow: "2px 6px 8px rgba(0, 0, 0.6, 0.3)", transition: "transform 0.2s ease, box-shadow 0.2s ease" }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = "translateY(-5px)";
-                                    e.currentTarget.style.boxShadow = "4px 8px 16px rgba(0, 0, 0, 0.15)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = "translateY(0)";
-                                    e.currentTarget.style.boxShadow = "2px 4px 8px rgba(0, 0, 0.1)";
-                                }}>
-
-                                <img src={image} alt={product.product_title} style={{ width: "260px", height: "220px", objectFit: "cover", borderRadius: "5px" }} />
-                                <div className="flex justify-between">
-                                    <h3 className="w-40 relative left-1" style={{ color: "064420", fontWeight: "600" }}>{product.product_title}</h3>
-                                    <p className="text-gray-500 relative right-1">{product.rating} <span style={{ color: "Green", fontSize: "20px" }}>★</span> </p>
+                <div className="grid grid-cols-1 gap-4">
+                    {products.map((product) => (
+                        <div key={product.product_id} className="bg-white p-4 rounded-lg shadow-md flex items-center justify-between">
+                            <div className="flex items-center flex-1">
+                                <img 
+                                    src={`/thumbnail/${product.product_id}.jpeg`}
+                                    alt={product.product_title} 
+                                    className="w-32 h-32 object-cover rounded-md mr-6"
+                                />
+                                <div className="flex flex-col flex-1">
+                                    <div className="flex justify-between items-center mb-2">
+                                        <h3 className="text-lg font-semibold text-[#064420]">{product.product_title}</h3>
+                                        <p className="text-gray-500">
+                                            {product.rating} <span className="text-green-600 text-xl">★</span>
+                                        </p>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <p className="text-gray-800 text-lg font-medium">Rs.{product.price}</p>
+                                        <button 
+                                            className="bg-[#1E3A8A] text-[#FFD700] px-4 py-2 rounded-lg hover:bg-[#1E3A9A] transition-colors"
+                                            onClick={() => Handle_BuyNow(product)}
+                                        >
+                                            Buy Now⚡
+                                        </button>
+                                    </div>
                                 </div>
-                                <div className="flex justify-between">
-                                    <p className="relative top-4 left-1" style={{ color: "#333", fontSize: "16px" }}>Rs.{product.price}</p>
-                                    <button className="border rounded-lg relative top-1 right-1" style={{ backgroundColor: "#1E3A8A", color: "#FFD700", border: "none", padding: "5px 10px" }} onClick={() => Handle_BuyNow(product)}>Buy Now⚡</button>
-                                </div>
-
                             </div>
-                        ))}
-                    </div>
-                    <ToastContainer />
+                        </div>
+                    ))}
                 </div>
             )}
+            <ToastContainer />
         </div>
     );
 
 }
 
-export default UserCart
+export default CartPage
