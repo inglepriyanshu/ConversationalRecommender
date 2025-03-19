@@ -53,25 +53,6 @@ export default function Products({ products }) {
 
     return (
         <div id="product">
-            <h1 className="text-3xl font-bold text-center mb-12 text-gray-900">Top Offers</h1>
-            <div className="gap-2 grid grid-cols-4 m-10">
-                {products.map((product) => (
-                    <div key={product.id} style={{ border: "1px solid #ddd", padding: "10px", width: "200px" }}>
-                        <img 
-                            src={`/thumbnail/${product.product_id}.jpeg`}
-                            alt={product.title} 
-                            style={{ width: "100%", height: "150px", objectFit: "cover" }} 
-                        />
-                        <h3>{product.title}</h3>
-                        <p>${product.price}</p>
-                        <p className="text-gray-500">{product.rating.rate}</p>
-                        <button style={{ backgroundColor: "green", color: "white", border: "none", padding: "5px 10px" }}
-                            onClick={() => Handle_addToCart(product)}>
-                            Add to Cart
-                        </button>
-                    </div>
-                ))}
-            </div>
             <ToastContainer />
         </div>
     )
