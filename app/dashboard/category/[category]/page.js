@@ -119,8 +119,6 @@ const CategoryPage = () => {
         fetchData();
     }, [category]);
 
-    const image = "https://imgs.search.brave.com/v9XZqTXTlS9c4Qym9OqHaDin-5-nKdIzBg1C7Ye6lZA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saXZl/LXByb2R1Y3Rpb24u/d2Ntcy5hYmMtY2Ru/Lm5ldC5hdS9iMTFl/YWIxZDFiMmYwYzEz/ZDUyMjU5NjMyZTQ3/MmM5ND9pbXBvbGlj/eT13Y21zX2Nyb3Bf/cmVzaXplJmNyb3BI/PTE2ODYmY3JvcFc9/Mjk5OCZ4UG9zPTAm/eVBvcz01NSZ3aWR0/aD04NjImaGVpZ2h0/PTQ4NQ"
-
     return (
         <div className="w-full p-6">
             <h1 className="p-1 text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-yellow-400 inline-block rounded-lg">Category: {category}</h1>
@@ -136,7 +134,12 @@ const CategoryPage = () => {
                             e.currentTarget.style.boxShadow = "2px 4px 8px rgba(0, 0, 0, 0.1)";
                         }}>
 
-                        <img src={image} onClick={() => router.push(`/dashboard/products/${product.product_id}`)} alt={product.product_title} className="w-full h-48 object-cover rounded-lg hover:cursor-pointer" />
+                        <img 
+                            src={`/thumbnail/${product.product_id}.jpeg`}
+                            onClick={() => router.push(`/dashboard/products/${product.product_id}`)} 
+                            alt={product.product_title} 
+                            className="w-full h-48 object-cover rounded-lg hover:cursor-pointer" 
+                        />
                         <div className="flex justify-between">
                             <h3 className="text-lg font-semibold text-gray-800 mt-3">{product.product_title}</h3>
                             <p className="text-gray-500 relative right-1 top-3 m-1">{product.rating}⭐⭐⭐⭐⭐</p>
