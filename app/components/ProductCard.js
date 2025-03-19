@@ -13,6 +13,7 @@ const ProductCard = ({ product }) => {
                 <img 
                     src={`/thumbnail/${product.product_id}.jpeg`}
                     alt={product.product_title} 
+                    target="_blank" rel="noopener noreferrer"
                     className="w-full h-48 object-cover cursor-pointer"
                     onClick={() => router.push(`/dashboard/products/${product.product_id}`)}
                 />

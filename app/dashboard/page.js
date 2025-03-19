@@ -4,6 +4,7 @@
 import Carousel from "../components/carousel";
 import ProductCard from "../components/ProductCard";
 import { useRouter } from "next/navigation";
+import { useState } from 'react';
 
 // Static categories with sub-categories
 const categories = [
@@ -14,6 +15,15 @@ const categories = [
 
 const mainDashboard = () => {
     const router = useRouter();
+    const [expandedCategory, setExpandedCategory] = useState(null);
+
+    const toggleCategory = (categoryName) => {
+        setExpandedCategory(expandedCategory === categoryName ? null : categoryName);
+    };
+
+    const handleCategoryDoubleClick = (categoryName) => {
+        router.push(`/dashboard/category/${categoryName}`);
+    };
 
     return (
         <div>
@@ -25,28 +35,36 @@ const mainDashboard = () => {
                     <h1 className="text-xl font-bold text-gray-800 mb-4">Categories</h1>
                     <ul>
                         {categories.map(cat => (
-                            <li key={cat.name} 
-                                className="relative group py-2 pl-2 hover:bg-gray-300 cursor-pointer"
-                                onClick={() => router.push(`/dashboard/category/${cat.name}`)}>
-                                {cat.name}
-                                <div className="absolute left-full top-0 ml-2 w-40 bg-white border border-gray-300 rounded-md shadow-lg hidden group-hover:block z-10">
-                                    <ul>
-                                        {cat.subCategories.map(sub => (
-                                            <li 
-                                                key={sub} 
-                                                className="p-2 hover:bg-gray-200 cursor-pointer"
-                                                onClick={(e) => { e.stopPropagation(); router.push(`/dashboard/sub-category/${sub}`) }}>
-                                                {sub}
-                                            </li>
-                                        ))}
-                                    </ul>
+                            <li key={cat.name} className="mb-2">
+                                <div 
+                                    className="flex items-center justify-between py-2 px-2 hover:bg-gray-300 cursor-pointer rounded-md"
+                                    onClick={() => toggleCategory(cat.name)}
+                                    onDoubleClick={() => handleCategoryDoubleClick(cat.name)}
+                                >
+                                    <span>{cat.name}</span>
+                                    <span className="transition-transform duration-200" 
+                                          style={{ transform: expandedCategory === cat.name ? 'rotate(90deg)' : 'rotate(0deg)' }}>
+                                        ›
+                                    </span>
                                 </div>
+                                <ul className={`ml-4 overflow-hidden transition-all duration-200 ${
+                                    expandedCategory === cat.name ? 'max-h-40 mt-2' : 'max-h-0'
+                                }`}>
+                                    {cat.subCategories.map(sub => (
+                                        <li 
+                                            key={sub}
+                                            className="py-1 px-2 hover:bg-gray-300 cursor-pointer rounded-md text-sm"
+                                            onClick={() => router.push(`/dashboard/sub-category/${sub}`)}
+                                        >
+                                            {sub}
+                                        </li>
+                                    ))}
+                                </ul>
                             </li>
                         ))}
                     </ul>
                 </aside>
                 <main className="w-full bg-gradient-to-r from-blue-300 to-green-200 border rounded-md p-4">
-                    {/* The ProductCard now shows grouped products by category */}
                     <ProductCard />
                 </main>
             </div>            

@@ -10,19 +10,17 @@ let index = 0;
 const Chatbot = () => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([]);
-  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef(null);
 
   // Auto-scroll to the latest message
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, products]);
+  }, [messages]);
 
-  // Modified: fetch product details limited to 3 products
+  // Modified: fetch product details and return them
   const fetchRecommendedProducts = async (productIds) => {
     try {
-      // Limit to at most 3 product IDs
       const limitedIds = productIds.slice(0, 3);
       const fetchedProducts = await Promise.all(
         limitedIds.map(async (id) => {
@@ -30,9 +28,10 @@ const Chatbot = () => {
           return res.json();
         })
       );
-      setProducts(fetchedProducts);
+      return fetchedProducts;
     } catch (error) {
       console.error("Error fetching recommended products:", error);
+      return [];
     }
   };
 
@@ -40,7 +39,6 @@ const Chatbot = () => {
     e.preventDefault();
     if (!input.trim()) return;
 
-    // Append the user's message
     const userMessage = { sender: 'user', text: input };
     setMessages((prev) => [...prev, userMessage]);
     const currentMessage = input;
@@ -48,25 +46,26 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      // Call the API
       const response = await fetch('http://localhost:8000/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: currentMessage, index: index }),
       });
-      const data = await response.json(); 
-      
+      const data = await response.json();
       console.log(data);
       console.log(index);
       index++;
 
-      // If product_ids is returned, fetch details for a maximum of 3 products
+      let products = [];
       if (data.product_ids && data.product_ids.length > 0) {
-        await fetchRecommendedProducts(data.product_ids);
+        products = await fetchRecommendedProducts(data.product_ids);
       }
 
-      // Append bot reply message
-      const botMessage = { sender: 'bot', text: data.reply };
+      const botMessage = { 
+        sender: 'bot', 
+        text: data.reply,
+        products: products 
+      };
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       console.error(error);
@@ -88,19 +87,29 @@ const Chatbot = () => {
 
       <main className="flex-grow bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 rounded-lg shadow-md p-6 overflow-y-auto space-y-4">
         {messages.map((msg, idx) => (
-          <div
-            key={idx}
-            className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-          >
+          <div key={idx}>
             <div
-              className={`px-4 py-3 rounded-xl max-w-md text-sm transition-all duration-200 ${
-                msg.sender === 'user'
-                  ? 'bg-green-500 text-white shadow-lg'
-                  : 'bg-yellow-200 text-gray-800 shadow'
-              }`}
+              className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
-              {msg.text}
+              <div
+                className={`px-4 py-3 rounded-xl max-w-md text-sm transition-all duration-200 ${
+                  msg.sender === 'user'
+                    ? 'bg-green-500 text-white shadow-lg'
+                    : 'bg-yellow-200 text-gray-800 shadow'
+                }`}
+              >
+                {msg.text}
+              </div>
             </div>
+            {msg.sender === 'bot' && msg.products && msg.products.length > 0 && (
+              <div className="mt-4 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {msg.products.map((prod, pidx) => (
+                    <ProductCard key={pidx} product={prod} />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         ))}
 
@@ -110,18 +119,6 @@ const Chatbot = () => {
           </div>
         )}
         <div ref={chatEndRef} />
-        
-        {/* Modified: Render recommended product cards in a grid with max 3 columns */}
-        {products.length > 0 && (
-          <div className="mt-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Recommended Products</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {products.map((prod, idx) => (
-                <ProductCard key={idx} product={prod} />
-              ))}
-            </div>
-          </div>
-        )}
       </main>
 
       <form className="mt-4 flex items-center space-x-2" onSubmit={handleSend}>
