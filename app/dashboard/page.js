@@ -5,6 +5,7 @@ import Carousel from "../components/carousel";
 import ProductCard from "../components/ProductCard";
 import { useRouter } from "next/navigation";
 import { useState } from 'react';
+import DashboardNavbar from "../components/dashboardNavbar";
 
 // Static categories with sub-categories
 const categories = [
@@ -16,6 +17,7 @@ const categories = [
 const mainDashboard = () => {
     const router = useRouter();
     const [expandedCategory, setExpandedCategory] = useState(null);
+    const [searchQuery, setSearchQuery] = useState(""); // State for search query
 
     const toggleCategory = (categoryName) => {
         setExpandedCategory(expandedCategory === categoryName ? null : categoryName);
@@ -27,6 +29,7 @@ const mainDashboard = () => {
 
     return (
         <div>
+            <DashboardNavbar setSearchQuery={setSearchQuery} /> {/* Pass setSearchQuery */}
             <div className="m-3">
                 <Carousel />
             </div>
@@ -61,11 +64,11 @@ const mainDashboard = () => {
                                     ))}
                                 </ul>
                             </li>
-                        ))}
+                        ))} 
                     </ul>
                 </aside>
                 <main className="w-full bg-gradient-to-r from-blue-300 to-green-200 border rounded-md p-4">
-                    <ProductCard />
+                    <ProductCard searchQuery={searchQuery} /> {/* Pass searchQuery */}
                 </main>
             </div>            
         </div>

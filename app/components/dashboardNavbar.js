@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { Search, ShoppingCart, User, LogOut } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 
-export default function DashboardNavbar() {
-  const [searchQuery, setSearchQuery] = useState("");
+export default function DashboardNavbar({ setSearchQuery }) { // Accept setSearchQuery as a prop
   const [details, setDetails] = useState(null);
   const pathName = usePathname();
   const router = useRouter();
@@ -60,8 +59,7 @@ export default function DashboardNavbar() {
                          focus:ring-2 focus:ring-green-500 focus:border-transparent
                          shadow-sm placeholder:text-gray-400"
                 placeholder="What you want today..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => setSearchQuery(e.target.value)} // Update search query in parent
               />
             </div>
           </div>

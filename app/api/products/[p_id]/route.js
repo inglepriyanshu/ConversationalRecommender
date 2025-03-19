@@ -12,7 +12,7 @@ export async function GET(req,{params}) {
   
 
   try {
-    const product = await productModel.findOne({ product_id: p_id });
+    const product = await productModel.find({ product_id: p_id });
 
     if (!product) {
       return NextResponse.json({ message: 'Product not found' });

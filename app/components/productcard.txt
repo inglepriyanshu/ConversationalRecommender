@@ -3,7 +3,6 @@ import { toast, ToastContainer } from "react-toastify";
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 
-
 const ProductCard = ({ product, searchQuery }) => {
     const router = useRouter();
 
@@ -130,23 +129,20 @@ const ProductCard = ({ product, searchQuery }) => {
         return acc;
     }, {});
 
-    const filteredProducts = (() => {
-        if (!searchQuery) return products;
-    
-        const fuse = new Fuse(products, {
-            keys: ['product_title', 'category', 'product_description', 'sub_category', 'brand'],
-            threshold: 0.3, // Lower values give stricter matches, 0.3 is a good balance
-        });
-    
-        return fuse.search(searchQuery).map(result => result.item);
-    })();
+    const filteredProducts = products.filter((prod) => (
+        (prod.product_title && prod.product_title.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        (prod.category && prod.category.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        (prod.product_description && prod.product_description.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        (prod.sub_category && prod.sub_category.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        (prod.brand && prod.brand.toLowerCase().includes(searchQuery.toLowerCase()))
+    ));
 
     return (
-        <div className="p-4 w-full">
+        <div className="p-4">
             {searchQuery ? (
                 // Render all filtered products without category grouping
                 filteredProducts.length > 0 ? (
-                    <div className="grid grid-cols-2 gap-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {filteredProducts.map(prod => (
                             <div key={prod.product_id}
                                 className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"

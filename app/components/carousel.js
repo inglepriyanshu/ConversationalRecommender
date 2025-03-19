@@ -11,6 +11,7 @@ export default function Carousel() {
   const slides = [
     "/images/Product_carousel1.png",
     "/images/Product_carousel2.png",
+    "/images/Product_carousel3.png",
     "/images/Product_carousel4.png",
   ];
 

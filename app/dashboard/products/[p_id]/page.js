@@ -31,18 +31,18 @@ const ProductPage = () => {
     }, [p_id]); 
 
     const getColorEmoji = (color) => {
-        switch (color.toLowerCase()) {
-            case "red":
+        switch (color) {
+            case "Red":
                 return "🔴";
-            case "blue":
+            case "Blue":
                 return "🔵";
-            case "green":
+            case "Green":
                 return "🟢";
-            case "yellow":
+            case "Yellow":
                 return "🟡";
-            case "black":
+            case "Black":
                 return "⚫";
-            case "white":
+            case "White":
                 return "⚪";
             default:
                 return "❓"; // Default icon
@@ -119,7 +119,7 @@ const ProductPage = () => {
     }    
 
 
-    let image = "https://images.pexels.com/photos/12725050/pexels-photo-12725050.jpeg"
+    
 
     if (!product) return <p>Loading...</p>;
 
@@ -129,7 +129,7 @@ const ProductPage = () => {
         <div className='flex m-10 rounded-md p-10 relative left-32 items-center' style={{ backgroundColor: "#F3F7F3", boxShadow: "2px 4px 10px rgba(0, 0, 0, 0.3)", width: "900px" }}>
             <div id='img' className='w-96 h-72 rounded-md'>
                 <img 
-                    src={productImage}
+                    src={`/thumbnail/${product.product_id}.jpeg`}
                     alt={product.product_title} 
                     style={{ width: "450px", height: "288px", objectFit: "cover", borderRadius: "10px" }} 
                 />

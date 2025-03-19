@@ -99,7 +99,7 @@ const CartPage = () => {
                                     <div className="flex justify-between items-center mb-2">
                                         <h3 className="text-lg font-semibold text-[#064420]">{product.product_title}</h3>
                                         <p className="text-gray-500">
-                                            {product.rating} <span className="text-green-600 text-xl">★</span>
+                                            {product.rating} <span className="text-green-600 text-xl">⭐</span>
                                         </p>
                                     </div>
                                     <div className="flex justify-between items-center">
