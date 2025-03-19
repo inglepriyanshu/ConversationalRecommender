@@ -81,10 +81,14 @@ const ProductCard = ({ product }) => {
         fetchData();
     }, []);
 
+    const categoryOrder = ["Shoes", "Clothing", "Electronics"];
+    
     const groupedProducts = products.reduce((acc, curr) => {
         const cat = curr.category || "Uncategorized";
         if (!acc[cat]) acc[cat] = [];
-        acc[cat].push(curr);
+        if (acc[cat].length < 6) {
+            acc[cat].push(curr);
+        }
         return acc;
     }, {});
 
@@ -92,41 +96,43 @@ const ProductCard = ({ product }) => {
 
     return (
         <div className="p-4">
-            {Object.keys(groupedProducts).map(category => (
-                <div key={category} className="mb-8">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4">{category}</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                        {groupedProducts[category].map(prod => (
-                            <div key={prod.product_id} 
-                                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-                            >
-                                <img 
-                                    src={`/thumbnail/${prod.product_id}.jpeg`}
-                                    onClick={() => router.push(`/dashboard/products/${prod.product_id}`)}
-                                    alt={prod.product_title} 
-                                    className="w-full h-48 object-cover cursor-pointer" 
-                                />
-                                <div className="p-4">
-                                    <div className="flex justify-between items-center mb-2">
-                                        <h3 className="text-lg font-semibold text-gray-800">{prod.product_title}</h3>
-                                        <p className="text-gray-500 flex items-center">
-                                            {prod.rating} <span className="text-green-600 ml-1 text-xl">★</span>
-                                        </p>
-                                    </div>
-                                    <div className="flex justify-between items-center">
-                                        <p className="text-xl text-gray-700 font-bold">Rs.{prod.price}</p>
-                                        <button 
-                                            onClick={() => Handle_addToCart(prod)}
-                                            className="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded-md"
-                                        >
-                                            Add to Cart
-                                        </button>
+            {categoryOrder.map(category => (
+                groupedProducts[category] && (
+                    <div key={category} className="mb-8">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-4">{category}</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            {groupedProducts[category].map(prod => (
+                                <div key={prod.product_id} 
+                                    className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                                >
+                                    <img 
+                                        src={`/thumbnail/${prod.product_id}.jpeg`}
+                                        onClick={() => router.push(`/dashboard/products/${prod.product_id}`)}
+                                        alt={prod.product_title} 
+                                        className="w-full h-48 object-cover cursor-pointer" 
+                                    />
+                                    <div className="p-4">
+                                        <div className="flex justify-between items-center mb-2">
+                                            <h3 className="text-lg font-semibold text-gray-800">{prod.product_title}</h3>
+                                            <p className="text-gray-500 flex items-center">
+                                                {prod.rating} <span className="text-green-600 ml-1 text-xl">★</span>
+                                            </p>
+                                        </div>
+                                        <div className="flex justify-between items-center">
+                                            <p className="text-xl text-gray-700 font-bold">Rs.{prod.price}</p>
+                                            <button 
+                                                onClick={() => Handle_addToCart(prod)}
+                                                className="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded-md"
+                                            >
+                                                Add to Cart
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )
             ))}
             <ToastContainer />
         </div>
