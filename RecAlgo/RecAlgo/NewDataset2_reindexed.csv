@@ -1,0 +1,346 @@
+product_id,product_title,price,brand,color,category,sub_category,product_description,rating
+0,Adidas Superstar,5999,Adidas,White,Shoes,Sneakers,"The Adidas Superstar is an iconic sneaker featuring a genuine leather upper, rubber shell toe, and timeless design as sold by Adidas India.",4
+1,Adidas Stan Smith,6999,Adidas,White,Shoes,Sneakers,"Adidas Stan Smith is renowned for its minimalist design with premium leather and signature perforations, available in India as a classic lifestyle sneaker.",2
+2,Adidas Ultraboost DNA,11999,Adidas,Black,Shoes,Sneakers,Adidas Ultraboost DNA offers superior Boost cushioning and a flexible knit upper for dynamic movement—an authentic model in the Indian market.,3
+3,Adidas NMD_R1,10999,Adidas,Blue,Shoes,Sneakers,"The Adidas NMD_R1 blends street style with performance by featuring innovative Boost cushioning and a sleek, modern design available in India.",3
+4,Adidas Gazelle,4999,Adidas,Red,Shoes,Sneakers,"Adidas Gazelle is a classic sneaker known for its soft suede upper and vintage design, popular in India for casual wear.",2
+5,Adidas Samba,4499,Adidas,Black,Shoes,Sneakers,"The Adidas Samba is a timeless indoor soccer-inspired sneaker, crafted with leather and suede overlays for durability and everyday style.",2
+6,Adidas Forum Low,5499,Adidas,Blue,Shoes,Sneakers,"Adidas Forum Low is a retro-styled sneaker featuring a padded collar and premium leather, a favorite among Indian sneaker enthusiasts.",3
+7,Adidas Originals Nizza,3999,Adidas,White,Shoes,Sneakers,The Adidas Originals Nizza is a low-top sneaker with a minimalist design ideal for everyday casual style in India.,3
+8,Adidas ZX Flux,6599,Adidas,Black,Shoes,Sneakers,"Adidas ZX Flux combines a modern, layered design with lightweight construction for all-day comfort, sold as a lifestyle sneaker.",5
+9,Adidas Swift Run,5299,Adidas,Blue,Shoes,Sneakers,"Adidas Swift Run is engineered for performance with breathable mesh and responsive cushioning, offering a true running experience in India.",4
+10,Adidas Top Ten,3999,Adidas,Red,Shoes,Sneakers,"Adidas Top Ten delivers a retro look with durable construction and everyday comfort, a genuine model available in select Indian stores.",3
+11,Adidas Supercourt,4599,Adidas,White,Shoes,Sneakers,"Adidas Supercourt features a streamlined silhouette with premium leather and subtle design accents, perfect for urban style.",2
+12,Nike Air Max 90,6499,Nike,White,Shoes,Sneakers,Nike Air Max 90 is a classic sneaker known for its visible Air cushioning and heritage design that helped shape sneaker culture in India.,3
+13,Nike Air Max 97,7999,Nike,Black,Shoes,Sneakers,"Nike Air Max 97 offers a futuristic design with full-length Air cushioning and reflective details, available as an authentic model in India.",4
+14,Nike Air Force 1 '07,7499,Nike,Blue,Shoes,Sneakers,Nike Air Force 1 '07 updates the iconic silhouette with premium leather and classic styling for everyday wear in the Indian market.,5
+15,Nike React Infinity Run Flyknit,8999,Nike,Red,Shoes,Sneakers,"Nike React Infinity Run Flyknit is engineered with responsive React foam and a supportive Flyknit upper, designed for serious runners in India.",4
+16,Nike Air Zoom Pegasus 38,6499,Nike,Black,Shoes,Sneakers,"Nike Air Zoom Pegasus 38 delivers balanced cushioning and a breathable mesh upper, a trusted choice among Indian athletes.",3
+17,Nike Blazer Mid '77,6999,Nike,White,Shoes,Sneakers,"Nike Blazer Mid '77 fuses vintage style with modern comfort, featuring a high-top silhouette and durable construction favored in India.",2
+18,Nike Court Vision Low,5299,Nike,Blue,Shoes,Sneakers,Nike Court Vision Low is inspired by classic basketball design with retro detailing and premium materials for everyday style.,5
+19,Nike Dunk Low,7599,Nike,Red,Shoes,Sneakers,"Nike Dunk Low offers bold color blocking and a durable build, a cult classic reintroduced for modern urban wear in India.",4
+20,Nike Air VaporMax Flyknit 3,9999,Nike,Black,Shoes,Sneakers,"Nike Air VaporMax Flyknit 3 revolutionizes cushioning with a full-length VaporMax Air unit and lightweight Flyknit upper, available in India.",3
+21,Nike Air Jordan 1 Retro High OG,18999,Nike,White,Shoes,Sneakers,"Nike Air Jordan 1 Retro High OG is an iconic basketball sneaker with premium leather and classic design details, a must-have in India.",2
+22,Nike ZoomX Vaporfly NEXT%,22999,Nike,Black,Shoes,Sneakers,"Nike ZoomX Vaporfly NEXT% is engineered for elite performance with advanced ZoomX foam and a streamlined design, available for competitive runners in India.",5
+23,Nike React Element 55,6499,Nike,Blue,Shoes,Sneakers,Nike React Element 55 combines innovative React cushioning with bold aesthetics for the modern sneaker enthusiast in India.,4
+24,Reebok Classic Leather,5499,Reebok,White,Shoes,Sneakers,"Reebok Classic Leather in White is a timeless sneaker featuring a premium leather upper and minimalistic design, authentic to Reebok’s heritage.",5
+25,Reebok Club C 85,5199,Reebok,Black,Shoes,Sneakers,"Reebok Club C 85 in Black delivers a retro-inspired look with modern comfort, a staple sneaker sold across India.",2
+26,Reebok Classic Nylon,4799,Reebok,Blue,Shoes,Sneakers,"Reebok Classic Nylon in Blue offers a lightweight, casual design with a vintage feel, popular among Indian consumers.",4
+27,Reebok Zig Kinetica Edge,6499,Reebok,Red,Shoes,Sneakers,Reebok Zig Kinetica Edge in Red features dynamic cushioning and a unique zigzag design engineered for active performance.,2
+28,Reebok Zig Kinetica Base,6299,Reebok,Black,Shoes,Sneakers,"The Reebok Zig Kinetica Base in Black combines innovative technology with a modern design, built for everyday athletic use.",4
+29,Reebok Nano 9,6999,Reebok,Blue,Shoes,Sneakers,"Reebok Nano 9 in Blue is a high-performance training shoe designed for cross-training and durability, trusted by fitness enthusiasts in India.",1
+30,Reebok Nano X1,7199,Reebok,White,Shoes,Sneakers,"Reebok Nano X1 in White offers enhanced stability and breathability for high-intensity workouts, a real model from Reebok India.",2
+31,Reebok Instapump Fury,10999,Reebok,Red,Shoes,Sneakers,"Reebok Instapump Fury in Red is a bold, basketball-inspired sneaker known for its innovative pump technology and distinctive design.",4
+32,Reebok DMX Run 10,6499,Reebok,White,Shoes,Sneakers,"Reebok DMX Run 10 in White delivers responsive cushioning with DMX technology, offering a smooth running experience for Indian runners.",4
+33,Reebok Forever Floatride Run X,7599,Reebok,Blue,Shoes,Sneakers,"Reebok Forever Floatride Run X in Blue features ultra-lightweight cushioning and a responsive ride, ideal for long-distance running.",3
+34,Reebok Club C 85 II,5299,Reebok,Black,Shoes,Sneakers,"Reebok Club C 85 II in Black is an updated classic offering improved comfort and a sleek design, available across India.",3
+35,Reebok Zig 2.0,6399,Reebok,Red,Shoes,Sneakers,"Reebok Zig 2.0 in Red redefines athletic performance with advanced cushioning and a dynamic aesthetic, a genuine model in the Indian market.",5
+36,Puma Suede Classic,4999,Puma,Black,Shoes,Sneakers,Puma Suede Classic in Black is an iconic sneaker featuring premium suede and a timeless design that has been a staple in India for decades.,2
+37,Puma Future Rider,5999,Puma,White,Shoes,Sneakers,"Puma Future Rider in White blends retro style with modern comfort, featuring a lightweight design and cushioned midsole popular in India.",4
+38,Puma RS-X,6999,Puma,Red,Shoes,Sneakers,"Puma RS-X in Red offers a bold, chunky design with vibrant accents and advanced cushioning technology, a hit among urban consumers in India.",5
+39,Puma Clyde,5499,Puma,Blue,Shoes,Sneakers,"Puma Clyde in Blue pays homage to basketball heritage with its sleek silhouette and premium materials, a classic sneaker available in India.",3
+40,Puma Cell Venom,6499,Puma,Black,Shoes,Sneakers,"Puma Cell Venom in Black delivers an aggressive design with dynamic cushioning technology, designed for on-court performance in India.",1
+41,Puma Rider 2.0,4299,Puma,White,Shoes,Sneakers,"Puma Rider 2.0 in White is a lightweight, versatile sneaker that provides comfort and style for everyday use in India.",3
+42,Puma LQD Cell,5999,Puma,Blue,Shoes,Sneakers,Puma LQD Cell in Blue features innovative Liquidcushion technology for responsive comfort in a modern athletic design.,5
+43,Puma Cali,4999,Puma,Red,Shoes,Sneakers,"Puma Cali in Red is a fashion-forward sneaker that combines a retro silhouette with contemporary style, a popular choice in India.",5
+44,Puma Basket Heart,5399,Puma,Black,Shoes,Sneakers,"Puma Basket Heart in Black offers a unique design with a distinctive heart motif and premium materials, crafted for urban fashion.",4
+45,Puma Fuse,4499,Puma,White,Shoes,Sneakers,"Puma Fuse in White is a versatile sneaker that merges performance features with casual style, ideal for daily wear in India.",5
+46,Puma RS-Z,6899,Puma,Blue,Shoes,Sneakers,Puma RS-Z in Blue is a dynamic sneaker featuring a futuristic design and advanced cushioning technology for high-performance use.,4
+47,Puma Future Rider Edge,6299,Puma,Black,Shoes,Sneakers,"Puma Future Rider Edge in Black refines the classic Future Rider with enhanced comfort and updated styling, a true evolution for the Indian market.",2
+48,Bata Formal Oxford – Classic,2500,Bata,Black,Shoes,Formal Shoes,"The Bata Formal Oxford – Classic features premium leather and a slip‐resistant sole, designed for professional office wear in India.",4
+49,Bata Derby – Executive,2700,Bata,Brown,Shoes,Formal Shoes,"The Bata Derby – Executive is crafted with durable leather and ergonomic comfort, offering a refined look for business settings.",3
+50,Bata Loafer – Heritage,3000,Bata,Tan,Shoes,Formal Shoes,"The Bata Loafer – Heritage combines traditional craftsmanship with modern comfort, presenting a timeless style for formal occasions.",3
+51,Bata Formal Brogue – Premium,3200,Bata,Black,Shoes,Formal Shoes,The Bata Formal Brogue – Premium showcases intricate brogue detailing and superior craftsmanship for upscale business attire.,4
+52,Bata Executive Formal – Deluxe,3500,Bata,Black,Shoes,Formal Shoes,"The Bata Executive Formal – Deluxe provides exceptional support and refined aesthetics, perfect for high-level corporate environments.",3
+53,Bata Comfit Formal – Comfort Plus,2400,Bata,Brown,Shoes,Formal Shoes,The Bata Comfit Formal – Comfort Plus is engineered for extended wear with enhanced cushioning and a breathable design.,3
+54,Bata Signature Formal – Supreme,3600,Bata,Black,Shoes,Formal Shoes,The Bata Signature Formal – Supreme stands out with signature detailing and a luxurious finish for elite professional style.,2
+55,Bata Derby – Urban,2700,Bata,Black,Shoes,Formal Shoes,"The Bata Derby – Urban merges modern aesthetics with traditional Derby design, making it versatile for formal and casual settings.",4
+56,Bata Formal Loafer – Executive,2900,Bata,Brown,Shoes,Formal Shoes,"The Bata Formal Loafer – Executive combines elegance and comfort, ideal for both formal and semi-formal business wear.",3
+57,Hush Puppies Classic Formal – Heritage,3200,Hush Puppies,Black,Shoes,Formal Shoes,"Hush Puppies Classic Formal – Heritage features soft, premium leather and a cushioned insole, ensuring exceptional comfort in formal settings.",4
+58,Hush Puppies Modern Formal – Executive,3400,Hush Puppies,Brown,Shoes,Formal Shoes,"Hush Puppies Modern Formal – Executive offers a sleek design with high-quality materials, combining modern style with traditional comfort.",2
+59,Hush Puppies Executive Formal – Luxe,3600,Hush Puppies,Black,Shoes,Formal Shoes,"Hush Puppies Executive Formal – Luxe is crafted with superior leather and advanced cushioning for a sophisticated, all-day formal wear experience.",4
+60,Hush Puppies Executive Formal – Premium,3700,Hush Puppies,Brown,Shoes,Formal Shoes,Hush Puppies Executive Formal – Premium provides refined style and superior cushioning for extended hours in a corporate setting.,4
+61,Hush Puppies Formal Oxford – Classic,3000,Hush Puppies,Black,Shoes,Formal Shoes,Hush Puppies Formal Oxford – Classic brings a traditional look with modern ergonomic enhancements for reliable formal wear.,3
+62,Hush Puppies Brogue – Modern,3500,Hush Puppies,Black,Shoes,Formal Shoes,Hush Puppies Brogue – Modern features contemporary brogue detailing with refined materials for a stylish business appearance.,5
+63,Hush Puppies Monk Strap – Executive,3600,Hush Puppies,Brown,Shoes,Formal Shoes,"Hush Puppies Monk Strap – Executive offers unique buckle detailing and a secure fit, combining tradition with modern elegance.",2
+64,Woodland Formal Boot – Heritage,4000,Woodland,Brown,Shoes,Formal Shoes,"Woodland Formal Boot – Heritage features rugged yet refined leather with durable soles, suitable for formal occasions.",4
+65,Woodland Formal Boot – Executive,4200,Woodland,Black,Shoes,Formal Shoes,Woodland Formal Boot – Executive is crafted with high-quality leather and robust construction for a sophisticated yet sturdy look.,4
+66,Woodland Brogue – Classic,4400,Woodland,Tan,Shoes,Formal Shoes,Woodland Brogue – Classic showcases traditional brogue perforations and authentic leather craftsmanship for a timeless style.,4
+67,Woodland Brogue – Premium,4600,Woodland,Brown,Shoes,Formal Shoes,"Woodland Brogue – Premium features intricate detailing and superior materials, offering an upscale formal shoe option.",2
+68,Woodland Monk Strap – Heritage,4800,Woodland,Black,Shoes,Formal Shoes,"Woodland Monk Strap – Heritage combines classic strap design with premium leather for an elegant, enduring style.",3
+69,Woodland Formal Oxford – Classic,4200,Woodland,Brown,Shoes,Formal Shoes,Woodland Formal Oxford – Classic delivers a sophisticated look with quality leather and meticulous detailing for professional settings.,3
+70,Woodland Derby – Modern,4300,Woodland,Black,Shoes,Formal Shoes,"Woodland Derby – Modern merges traditional Derby design with contemporary style, offering versatility for office and social events.",3
+71,Woodland Loafer – Executive,4100,Woodland,Tan,Shoes,Formal Shoes,Woodland Loafer – Executive offers a refined slip-on design with soft cushioning and a modern aesthetic for formal occasions.,2
+72,Woodland Signature Formal – Classic,4700,Woodland,Black,Shoes,Formal Shoes,Woodland Signature Formal – Classic stands out with distinctive branding and high-quality craftsmanship for elite professional style.,3
+73,Woodland Executive Brogue – Modern,4900,Woodland,Brown,Shoes,Formal Shoes,Woodland Executive Brogue – Modern combines traditional brogue details with modern comfort technology for a premium formal look.,3
+74,Red Tape Formal Shoe – Classic,4600,Red Tape,Black,Shoes,Formal Shoes,"Red Tape Formal Shoe – Classic offers refined styling with premium leather and meticulous craftsmanship, ideal for professional settings.",3
+75,Red Tape Business Shoe – Modern,5000,Red Tape,Brown,Shoes,Formal Shoes,Red Tape Business Shoe – Modern is engineered for a contemporary corporate appearance with enhanced comfort features.,5
+76,Red Tape Business Shoe – Signature,5200,Red Tape,Black,Shoes,Formal Shoes,Red Tape Business Shoe – Signature stands out with unique design elements and high-quality materials for an upscale professional image.,4
+77,Red Tape Formal Derby – Classic,4800,Red Tape,Brown,Shoes,Formal Shoes,Red Tape Formal Derby – Classic is a well-crafted Derby shoe with a timeless design and refined accents suitable for formal events.,2
+78,Red Tape Formal Oxford – Modern,5000,Red Tape,Black,Shoes,Formal Shoes,Red Tape Formal Oxford – Modern merges classic Oxford style with contemporary innovation for a sophisticated look.,3
+79,Red Tape Signature Formal – Elite,5600,Red Tape,Black,Shoes,Formal Shoes,Red Tape Signature Formal – Elite stands as a testament to exquisite craftsmanship and luxurious detailing for executive wear.,4
+80,Red Tape Premium Derby – Classic,5200,Red Tape,Brown,Shoes,Formal Shoes,"Red Tape Premium Derby – Classic delivers refined aesthetics with quality materials and a comfortable fit, perfect for the modern professional.",5
+81,Bata Men’s Walka 2.0 Sandal,1200,Bata,Black,Shoes,Sandals,"Bata Men’s Walka 2.0 Sandal is a popular model in India, known for its lightweight design and comfortable rubber sole.",3
+82,Bata Men’s Flexi Walk Sandal,1500,Bata,Blue,Shoes,Sandals,"Bata Men’s Flexi Walk Sandal features a flexible sole and durable leather upper, designed for everyday wear.",4
+83,Bata Men’s Active Step Sandal,1300,Bata,Red,Shoes,Sandals,Bata Men’s Active Step Sandal offers excellent grip and comfort with a robust design suited for active lifestyles.,5
+84,Bata Men’s Power Step Sandal,1400,Bata,White,Shoes,Sandals,"Bata Men’s Power Step Sandal is engineered for stability and long-lasting wear, ideal for urban commuters.",3
+85,Bata Men’s Classic Slide Sandal,1100,Bata,Black,Shoes,Sandals,Bata Men’s Classic Slide Sandal provides a timeless slip-on design with cushioned insoles for enhanced comfort.,4
+86,Bata Men’s Comfort X Sandal,1600,Bata,Blue,Shoes,Sandals,Bata Men’s Comfort X Sandal is crafted with premium materials and offers excellent arch support for all-day comfort.,3
+87,Bata Men’s Urban Glide Sandal,1700,Bata,Red,Shoes,Sandals,"Bata Men’s Urban Glide Sandal features an ergonomic design and lightweight construction, perfect for city use.",4
+88,Bata Men’s Summer Fresh Sandal,1500,Bata,White,Shoes,Sandals,Bata Men’s Summer Fresh Sandal is designed with breathable materials and a stylish look to keep feet cool in hot weather.,4
+89,Bata Men’s All-Weather Sandal,1800,Bata,Black,Shoes,Sandals,"Bata Men’s All-Weather Sandal is built for durability in varying conditions, combining comfort with a rugged design.",1
+90,Bata Men’s Sporty Slide Sandal,1400,Bata,Blue,Shoes,Sandals,Bata Men’s Sporty Slide Sandal offers a modern look with a shock-absorbing sole for active use.,4
+91,Bata Men’s Heritage Comfort Sandal,1900,Bata,Red,Shoes,Sandals,Bata Men’s Heritage Comfort Sandal recalls classic design cues with enhanced cushioning for all-day wear.,3
+92,Bata Men’s Premium Walk Sandal,2000,Bata,White,Shoes,Sandals,Bata Men’s Premium Walk Sandal features superior materials and craftsmanship for a refined yet durable sandal.,4
+93,Relaxo Easy Steps Sandal,800,Relaxo,Black,Shoes,Sandals,"Relaxo Easy Steps Sandal is a budget-friendly option known for its lightweight design and basic comfort, widely available in India.",5
+94,Relaxo Footprints Sandal,850,Relaxo,Blue,Shoes,Sandals,"Relaxo Footprints Sandal offers a casual design with soft cushioning and durable construction, ideal for daily use.",5
+95,Relaxo Quick Step Sandal,900,Relaxo,Red,Shoes,Sandals,"Relaxo Quick Step Sandal is designed for quick, comfortable strides with a breathable upper and sturdy sole.",3
+96,Relaxo Dazzler Sandal,950,Relaxo,White,Shoes,Sandals,Relaxo Dazzler Sandal features a trendy design with eye-catching details and reliable comfort for casual wear.,4
+97,Relaxo InStep Sandal,1000,Relaxo,Black,Shoes,Sandals,"Relaxo InStep Sandal provides a secure fit with a padded insole and durable outsole, suitable for everyday activities.",3
+98,Relaxo Ride Sandal,1050,Relaxo,Blue,Shoes,Sandals,"Relaxo Ride Sandal is built for comfort with a flexible sole and cushioned footbed, popular for its value.",4
+99,Relaxo Energy Sandal,1100,Relaxo,Red,Shoes,Sandals,Relaxo Energy Sandal delivers enhanced comfort and energy return with a well-cushioned design for long walks.,3
+100,Relaxo Casual Sandal,950,Relaxo,White,Shoes,Sandals,"Relaxo Casual Sandal is a lightweight, everyday sandal that balances simplicity and functionality.",4
+101,Relaxo Trendy Sandal,1200,Relaxo,Black,Shoes,Sandals,Relaxo Trendy Sandal offers modern styling and comfort with a durable build suitable for urban settings.,4
+102,Relaxo Sport Sandal,1150,Relaxo,Blue,Shoes,Sandals,"Relaxo Sport Sandal is engineered for active use with a sporty design, ideal for casual outdoor activities.",4
+103,Relaxo Comfort Sandal,1100,Relaxo,Red,Shoes,Sandals,Relaxo Comfort Sandal provides all-day cushioning and support with a focus on ergonomic design.,3
+104,Relaxo Classic Sandal,1000,Relaxo,White,Shoes,Sandals,Relaxo Classic Sandal delivers a straightforward design with reliable comfort and durability at a low price.,2
+105,Paragon Leather Sandal,1500,Paragon,Brown,Shoes,Sandals,"Paragon Leather Sandal is made from genuine leather with hand-stitched details, offering premium quality and classic style.",3
+106,Paragon Formal Sandal,1600,Paragon,Black,Shoes,Sandals,"Paragon Formal Sandal features a refined design with smooth leather and a sleek finish, perfect for semi-formal occasions.",4
+107,Paragon Comfort Sandal,1700,Paragon,Blue,Shoes,Sandals,Paragon Comfort Sandal is designed for long hours of wear with cushioned insoles and a flexible outsole.,3
+108,Paragon Sport Sandal,1800,Paragon,Red,Shoes,Sandals,Paragon Sport Sandal offers a dynamic design with enhanced grip and durability for active use.,2
+109,Paragon Classic Sandal,1550,Paragon,White,Shoes,Sandals,"Paragon Classic Sandal brings a timeless design with modern comfort, crafted from quality leather.",2
+110,Paragon Comfort Plus Sandal,1650,Paragon,Black,Shoes,Sandals,Paragon Comfort Plus Sandal features extra cushioning and a supportive footbed for maximum comfort.,4
+111,Paragon Premium Sandal,1750,Paragon,Blue,Shoes,Sandals,"Paragon Premium Sandal combines elegant design with high-quality materials, ideal for both casual and semi-formal wear.",2
+112,Paragon Urban Sandal,1850,Paragon,Red,Shoes,Sandals,Paragon Urban Sandal is tailored for the modern city dweller with a stylish design and durable construction.,2
+113,Paragon Executive Sandal,1900,Paragon,Black,Shoes,Sandals,Paragon Executive Sandal features premium leather and refined detailing for upscale casual settings.,4
+114,Paragon Trendy Sandal,1600,Paragon,White,Shoes,Sandals,Paragon Trendy Sandal offers a modern look with innovative design elements and comfortable wear.,2
+115,Paragon Heritage Sandal,1700,Paragon,Blue,Shoes,Sandals,Paragon Heritage Sandal recalls traditional craftsmanship with a robust design and timeless style.,5
+116,Paragon Luxe Sandal,1800,Paragon,Red,Shoes,Sandals,Paragon Luxe Sandal provides an elevated look with luxurious materials and meticulous detailing for discerning buyers.,3
+117,Liberty Casual Sandal,1000,Liberty,Black,Shoes,Sandals,"Liberty Casual Sandal is an affordable, everyday sandal designed for comfort and ease with a simple, classic style.",3
+118,Liberty Sport Sandal,1100,Liberty,Blue,Shoes,Sandals,"Liberty Sport Sandal features a lightweight build and enhanced grip for active, outdoor use.",5
+119,Liberty Comfort Sandal,1200,Liberty,Red,Shoes,Sandals,"Liberty Comfort Sandal offers cushioned support and a secure fit, ideal for long walks in urban environments.",4
+120,Liberty Urban Sandal,1300,Liberty,White,Shoes,Sandals,Liberty Urban Sandal is designed for modern lifestyles with a sleek design and durable construction.,3
+121,Liberty Designer Sandal,1400,Liberty,Black,Shoes,Sandals,Liberty Designer Sandal features trendy aesthetics and quality materials for a fashion-forward look.,2
+122,Liberty Trendy Sandal,1500,Liberty,Blue,Shoes,Sandals,"Liberty Trendy Sandal combines contemporary style with everyday comfort, perfect for casual outings.",3
+123,Liberty Heritage Sandal,1600,Liberty,Red,Shoes,Sandals,Liberty Heritage Sandal pays homage to traditional craftsmanship with quality construction and a classic design.,4
+124,Liberty Classic Sandal,1100,Liberty,White,Shoes,Sandals,Liberty Classic Sandal offers timeless style with a focus on durability and comfort for daily use.,2
+125,Liberty Elite Sandal,1700,Liberty,Black,Shoes,Sandals,Liberty Elite Sandal is a premium offering with refined design details and superior cushioning for all-day comfort.,2
+126,Liberty Active Sandal,1800,Liberty,Blue,Shoes,Sandals,"Liberty Active Sandal is built for performance with a robust outsole and supportive insole, ideal for active lifestyles.",3
+127,Liberty Signature Sandal,1900,Liberty,Red,Shoes,Sandals,Liberty Signature Sandal features distinctive styling and quality materials for a standout casual look.,3
+128,Liberty Modern Sandal,2000,Liberty,White,Shoes,Sandals,"Liberty Modern Sandal offers contemporary design with ergonomic features, perfect for urban wear.",5
+129,Nike Dri-FIT Classic T-Shirt - Red,1499,Nike,Red,Clothing,T-Shirts,"Nike Dri-FIT Classic T-Shirt offers moisture-wicking fabric and a comfortable fit, ideal for workouts and casual wear.",4
+130,Nike Dri-FIT Classic T-Shirt - Blue,1499,Nike,Blue,Clothing,T-Shirts,"Nike Dri-FIT Classic T-Shirt offers moisture-wicking fabric and a comfortable fit, ideal for workouts and casual wear.",3
+131,Nike Dri-FIT Classic T-Shirt - White,1499,Nike,White,Clothing,T-Shirts,"Nike Dri-FIT Classic T-Shirt offers moisture-wicking fabric and a comfortable fit, ideal for workouts and casual wear.",5
+132,Nike Dri-FIT Classic T-Shirt - Black,1499,Nike,Black,Clothing,T-Shirts,"Nike Dri-FIT Classic T-Shirt offers moisture-wicking fabric and a comfortable fit, ideal for workouts and casual wear.",4
+133,Nike Sportswear Icon T-Shirt - Red,1599,Nike,Red,Clothing,T-Shirts,"Nike Sportswear Icon T-Shirt features a stylish design with premium fabric, perfect for athletic and everyday use.",4
+134,Nike Sportswear Icon T-Shirt - Blue,1599,Nike,Blue,Clothing,T-Shirts,"Nike Sportswear Icon T-Shirt features a stylish design with premium fabric, perfect for athletic and everyday use.",2
+135,Nike Sportswear Icon T-Shirt - White,1599,Nike,White,Clothing,T-Shirts,"Nike Sportswear Icon T-Shirt features a stylish design with premium fabric, perfect for athletic and everyday use.",3
+136,Nike Sportswear Icon T-Shirt - Black,1599,Nike,Black,Clothing,T-Shirts,"Nike Sportswear Icon T-Shirt features a stylish design with premium fabric, perfect for athletic and everyday use.",5
+137,Nike Air Performance T-Shirt - Red,1699,Nike,Red,Clothing,T-Shirts,Nike Air Performance T-Shirt combines cutting-edge design with comfort and durability for active lifestyles.,1
+138,Nike Air Performance T-Shirt - Blue,1699,Nike,Blue,Clothing,T-Shirts,Nike Air Performance T-Shirt combines cutting-edge design with comfort and durability for active lifestyles.,4
+139,Nike Air Performance T-Shirt - White,1699,Nike,White,Clothing,T-Shirts,Nike Air Performance T-Shirt combines cutting-edge design with comfort and durability for active lifestyles.,4
+140,Nike Air Performance T-Shirt - Black,1699,Nike,Black,Clothing,T-Shirts,Nike Air Performance T-Shirt combines cutting-edge design with comfort and durability for active lifestyles.,2
+141,Adidas Club T-Shirt - Red,1299,Adidas,Red,Clothing,T-Shirts,"Adidas Club T-Shirt offers a relaxed fit with signature branding, ideal for casual style.",3
+142,Adidas Club T-Shirt - Blue,1299,Adidas,Blue,Clothing,T-Shirts,"Adidas Club T-Shirt offers a relaxed fit with signature branding, ideal for casual style.",3
+143,Adidas Club T-Shirt - White,1299,Adidas,White,Clothing,T-Shirts,"Adidas Club T-Shirt offers a relaxed fit with signature branding, ideal for casual style.",4
+144,Adidas Club T-Shirt - Black,1299,Adidas,Black,Clothing,T-Shirts,"Adidas Club T-Shirt offers a relaxed fit with signature branding, ideal for casual style.",4
+145,Adidas Essentials Graphic T-Shirt - Red,1399,Adidas,Red,Clothing,T-Shirts,Adidas Essentials Graphic T-Shirt features a bold design and premium cotton blend for everyday wear.,3
+146,Adidas Essentials Graphic T-Shirt - Blue,1399,Adidas,Blue,Clothing,T-Shirts,Adidas Essentials Graphic T-Shirt features a bold design and premium cotton blend for everyday wear.,4
+147,Adidas Essentials Graphic T-Shirt - White,1399,Adidas,White,Clothing,T-Shirts,Adidas Essentials Graphic T-Shirt features a bold design and premium cotton blend for everyday wear.,4
+148,Adidas Essentials Graphic T-Shirt - Black,1399,Adidas,Black,Clothing,T-Shirts,Adidas Essentials Graphic T-Shirt features a bold design and premium cotton blend for everyday wear.,3
+149,Adidas Originals Tee - Red,1499,Adidas,Red,Clothing,T-Shirts,"Adidas Originals Tee offers a classic look with high-quality materials, perfect for casual outings.",5
+150,Adidas Originals Tee - Blue,1499,Adidas,Blue,Clothing,T-Shirts,"Adidas Originals Tee offers a classic look with high-quality materials, perfect for casual outings.",2
+151,Adidas Originals Tee - White,1499,Adidas,White,Clothing,T-Shirts,"Adidas Originals Tee offers a classic look with high-quality materials, perfect for casual outings.",3
+152,Adidas Originals Tee - Black,1499,Adidas,Black,Clothing,T-Shirts,"Adidas Originals Tee offers a classic look with high-quality materials, perfect for casual outings.",3
+153,Puma Essential Performance T-Shirt - Red,1199,Puma,Red,Clothing,T-Shirts,Puma Essential Performance T-Shirt delivers comfort and style with advanced moisture management.,4
+154,Puma Essential Performance T-Shirt - Blue,1199,Puma,Blue,Clothing,T-Shirts,Puma Essential Performance T-Shirt delivers comfort and style with advanced moisture management.,3
+155,Puma Essential Performance T-Shirt - White,1199,Puma,White,Clothing,T-Shirts,Puma Essential Performance T-Shirt delivers comfort and style with advanced moisture management.,4
+156,Puma Essential Performance T-Shirt - Black,1199,Puma,Black,Clothing,T-Shirts,Puma Essential Performance T-Shirt delivers comfort and style with advanced moisture management.,3
+157,Puma Sport Logo T-Shirt - Red,1299,Puma,Red,Clothing,T-Shirts,"Puma Sport Logo T-Shirt showcases a dynamic design and superior fabric, suitable for active wear.",3
+158,Puma Sport Logo T-Shirt - Blue,1299,Puma,Blue,Clothing,T-Shirts,"Puma Sport Logo T-Shirt showcases a dynamic design and superior fabric, suitable for active wear.",4
+159,Puma Sport Logo T-Shirt - White,1299,Puma,White,Clothing,T-Shirts,"Puma Sport Logo T-Shirt showcases a dynamic design and superior fabric, suitable for active wear.",3
+160,Puma Sport Logo T-Shirt - Black,1299,Puma,Black,Clothing,T-Shirts,"Puma Sport Logo T-Shirt showcases a dynamic design and superior fabric, suitable for active wear.",4
+161,Puma Everyday Casual T-Shirt - Red,1399,Puma,Red,Clothing,T-Shirts,Puma Everyday Casual T-Shirt combines comfort with a stylish design for daily casual wear.,3
+162,Puma Everyday Casual T-Shirt - Blue,1399,Puma,Blue,Clothing,T-Shirts,Puma Everyday Casual T-Shirt combines comfort with a stylish design for daily casual wear.,4
+163,Puma Everyday Casual T-Shirt - White,1399,Puma,White,Clothing,T-Shirts,Puma Everyday Casual T-Shirt combines comfort with a stylish design for daily casual wear.,2
+164,Puma Everyday Casual T-Shirt - Black,1399,Puma,Black,Clothing,T-Shirts,Puma Everyday Casual T-Shirt combines comfort with a stylish design for daily casual wear.,3
+165,Reebok Classic T-Shirt - Red,1099,Reebok,Red,Clothing,T-Shirts,Reebok Classic T-Shirt offers a timeless design with quality fabric and a relaxed fit.,4
+166,Reebok Classic T-Shirt - Blue,1099,Reebok,Blue,Clothing,T-Shirts,Reebok Classic T-Shirt offers a timeless design with quality fabric and a relaxed fit.,3
+167,Reebok Classic T-Shirt - White,1099,Reebok,White,Clothing,T-Shirts,Reebok Classic T-Shirt offers a timeless design with quality fabric and a relaxed fit.,3
+168,Reebok Classic T-Shirt - Black,1099,Reebok,Black,Clothing,T-Shirts,Reebok Classic T-Shirt offers a timeless design with quality fabric and a relaxed fit.,3
+169,Reebok Active Performance T-Shirt - Red,1199,Reebok,Red,Clothing,T-Shirts,Reebok Active Performance T-Shirt features enhanced breathability and a modern cut for active lifestyles.,4
+170,Reebok Active Performance T-Shirt - Blue,1199,Reebok,Blue,Clothing,T-Shirts,Reebok Active Performance T-Shirt features enhanced breathability and a modern cut for active lifestyles.,2
+171,Reebok Active Performance T-Shirt - White,1199,Reebok,White,Clothing,T-Shirts,Reebok Active Performance T-Shirt features enhanced breathability and a modern cut for active lifestyles.,5
+172,Reebok Active Performance T-Shirt - Black,1199,Reebok,Black,Clothing,T-Shirts,Reebok Active Performance T-Shirt features enhanced breathability and a modern cut for active lifestyles.,4
+173,Reebok Graphic Tee - Red,1299,Reebok,Red,Clothing,T-Shirts,"Reebok Graphic Tee combines eye-catching design with premium comfort, perfect for making a statement.",5
+174,Reebok Graphic Tee - Blue,1299,Reebok,Blue,Clothing,T-Shirts,"Reebok Graphic Tee combines eye-catching design with premium comfort, perfect for making a statement.",2
+175,Reebok Graphic Tee - White,1299,Reebok,White,Clothing,T-Shirts,"Reebok Graphic Tee combines eye-catching design with premium comfort, perfect for making a statement.",4
+176,Reebok Graphic Tee - Black,1299,Reebok,Black,Clothing,T-Shirts,"Reebok Graphic Tee combines eye-catching design with premium comfort, perfect for making a statement.",3
+177,Levi's 511 Slim Fit Jeans - Blue,2999,Levi's,Blue,Clothing,Jeans,"Levi's 511 Slim Fit Jeans offer a modern cut with a comfortable stretch, ideal for a stylish look.",4
+178,Levi's 511 Slim Fit Jeans - Black,2999,Levi's,Black,Clothing,Jeans,"Levi's 511 Slim Fit Jeans offer a modern cut with a comfortable stretch, ideal for a stylish look.",2
+179,Levi's 501 Original Jeans - Blue,3199,Levi's,Blue,Clothing,Jeans,Levi's 501 Original Jeans provide a classic straight fit with durable denim construction.,3
+180,Levi's 501 Original Jeans - Black,3199,Levi's,Black,Clothing,Jeans,Levi's 501 Original Jeans provide a classic straight fit with durable denim construction.,4
+181,Levi's 514 Straight Jeans - Blue,2799,Levi's,Blue,Clothing,Jeans,"Levi's 514 Straight Jeans feature a timeless design with a comfortable, relaxed fit.",3
+182,Levi's 514 Straight Jeans - Black,2799,Levi's,Black,Clothing,Jeans,"Levi's 514 Straight Jeans feature a timeless design with a comfortable, relaxed fit.",5
+183,Wrangler Regular Fit Jeans - Blue,1999,Wrangler,Blue,Clothing,Jeans,"Wrangler Regular Fit Jeans offer durable denim with a classic cut, perfect for everyday wear.",5
+184,Wrangler Regular Fit Jeans - Black,1999,Wrangler,Black,Clothing,Jeans,"Wrangler Regular Fit Jeans offer durable denim with a classic cut, perfect for everyday wear.",4
+185,Wrangler Slim Fit Jeans - Blue,2099,Wrangler,Blue,Clothing,Jeans,Wrangler Slim Fit Jeans provide a modern silhouette with quality stitching and comfortable fabric.,1
+186,Wrangler Slim Fit Jeans - Black,2099,Wrangler,Black,Clothing,Jeans,Wrangler Slim Fit Jeans provide a modern silhouette with quality stitching and comfortable fabric.,3
+187,Wrangler Bootcut Jeans - Blue,2199,Wrangler,Blue,Clothing,Jeans,"Wrangler Bootcut Jeans combine a flattering bootcut design with durable denim, ideal for a versatile look.",3
+188,Wrangler Bootcut Jeans - Black,2199,Wrangler,Black,Clothing,Jeans,"Wrangler Bootcut Jeans combine a flattering bootcut design with durable denim, ideal for a versatile look.",4
+189,Lee Regular Fit Jeans - Blue,1899,Lee,Blue,Clothing,Jeans,Lee Regular Fit Jeans offer a comfortable fit with classic styling and reliable denim quality.,4
+190,Lee Regular Fit Jeans - Black,1899,Lee,Black,Clothing,Jeans,Lee Regular Fit Jeans offer a comfortable fit with classic styling and reliable denim quality.,4
+191,Lee Slim Fit Jeans - Blue,1999,Lee,Blue,Clothing,Jeans,"Lee Slim Fit Jeans feature a modern, tapered design with quality materials for everyday style.",2
+192,Lee Slim Fit Jeans - Black,1999,Lee,Black,Clothing,Jeans,"Lee Slim Fit Jeans feature a modern, tapered design with quality materials for everyday style.",3
+193,Lee Straight Fit Jeans - Blue,1799,Lee,Blue,Clothing,Jeans,Lee Straight Fit Jeans provide a balanced cut with comfort and durability for a classic look.,2
+194,Lee Straight Fit Jeans - Black,1799,Lee,Black,Clothing,Jeans,Lee Straight Fit Jeans provide a balanced cut with comfort and durability for a classic look.,3
+195,Pepe Jeans Skinny Fit - Blue,2499,Pepe Jeans,Blue,Clothing,Jeans,"Pepe Jeans Skinny Fit offers a modern, form-fitting design with premium denim for a stylish appearance.",3
+196,Pepe Jeans Skinny Fit - Black,2499,Pepe Jeans,Black,Clothing,Jeans,"Pepe Jeans Skinny Fit offers a modern, form-fitting design with premium denim for a stylish appearance.",3
+197,Pepe Jeans Slim Fit - Blue,2599,Pepe Jeans,Blue,Clothing,Jeans,Pepe Jeans Slim Fit delivers a contemporary cut with high-quality fabric and a versatile look.,3
+198,Pepe Jeans Slim Fit - Black,2599,Pepe Jeans,Black,Clothing,Jeans,Pepe Jeans Slim Fit delivers a contemporary cut with high-quality fabric and a versatile look.,4
+199,Pepe Jeans Classic Fit - Blue,2399,Pepe Jeans,Blue,Clothing,Jeans,Pepe Jeans Classic Fit provides a timeless design with reliable comfort and durable construction.,2
+200,Pepe Jeans Classic Fit - Black,2399,Pepe Jeans,Black,Clothing,Jeans,Pepe Jeans Classic Fit provides a timeless design with reliable comfort and durable construction.,3
+201,Allen Solly Formal Slim Shirt - Red,1999,Allen Solly,Red,Clothing,Shirts,"Allen Solly Formal Slim Shirt offers a tailored fit with premium fabric, perfect for business settings.",4
+202,Allen Solly Formal Slim Shirt - Blue,1999,Allen Solly,Blue,Clothing,Shirts,"Allen Solly Formal Slim Shirt offers a tailored fit with premium fabric, perfect for business settings.",2
+203,Allen Solly Formal Slim Shirt - White,1999,Allen Solly,White,Clothing,Shirts,"Allen Solly Formal Slim Shirt offers a tailored fit with premium fabric, perfect for business settings.",5
+204,Allen Solly Formal Slim Shirt - Black,1999,Allen Solly,Black,Clothing,Shirts,"Allen Solly Formal Slim Shirt offers a tailored fit with premium fabric, perfect for business settings.",2
+205,Allen Solly Business Casual Shirt - Red,1899,Allen Solly,Red,Clothing,Shirts,"Allen Solly Business Casual Shirt blends comfort with style, ideal for a smart-casual look.",2
+206,Allen Solly Business Casual Shirt - Blue,1899,Allen Solly,Blue,Clothing,Shirts,"Allen Solly Business Casual Shirt blends comfort with style, ideal for a smart-casual look.",3
+207,Allen Solly Business Casual Shirt - White,1899,Allen Solly,White,Clothing,Shirts,"Allen Solly Business Casual Shirt blends comfort with style, ideal for a smart-casual look.",3
+208,Allen Solly Business Casual Shirt - Black,1899,Allen Solly,Black,Clothing,Shirts,"Allen Solly Business Casual Shirt blends comfort with style, ideal for a smart-casual look.",5
+209,Allen Solly Classic Fit Shirt - Red,1799,Allen Solly,Red,Clothing,Shirts,Allen Solly Classic Fit Shirt delivers timeless design with a comfortable cut and quality finish.,2
+210,Allen Solly Classic Fit Shirt - Blue,1799,Allen Solly,Blue,Clothing,Shirts,Allen Solly Classic Fit Shirt delivers timeless design with a comfortable cut and quality finish.,5
+211,Allen Solly Classic Fit Shirt - White,1799,Allen Solly,White,Clothing,Shirts,Allen Solly Classic Fit Shirt delivers timeless design with a comfortable cut and quality finish.,3
+212,Allen Solly Classic Fit Shirt - Black,1799,Allen Solly,Black,Clothing,Shirts,Allen Solly Classic Fit Shirt delivers timeless design with a comfortable cut and quality finish.,1
+213,Van Heusen Regular Fit Shirt - Red,2099,Van Heusen,Red,Clothing,Shirts,Van Heusen Regular Fit Shirt offers a classic look with premium stitching and fabric.,2
+214,Van Heusen Regular Fit Shirt - Blue,2099,Van Heusen,Blue,Clothing,Shirts,Van Heusen Regular Fit Shirt offers a classic look with premium stitching and fabric.,1
+215,Van Heusen Regular Fit Shirt - White,2099,Van Heusen,White,Clothing,Shirts,Van Heusen Regular Fit Shirt offers a classic look with premium stitching and fabric.,4
+216,Van Heusen Regular Fit Shirt - Black,2099,Van Heusen,Black,Clothing,Shirts,Van Heusen Regular Fit Shirt offers a classic look with premium stitching and fabric.,4
+217,Van Heusen Slim Fit Shirt - Red,2199,Van Heusen,Red,Clothing,Shirts,Van Heusen Slim Fit Shirt combines modern tailoring with quality materials for a sharp appearance.,2
+218,Van Heusen Slim Fit Shirt - Blue,2199,Van Heusen,Blue,Clothing,Shirts,Van Heusen Slim Fit Shirt combines modern tailoring with quality materials for a sharp appearance.,4
+219,Van Heusen Slim Fit Shirt - White,2199,Van Heusen,White,Clothing,Shirts,Van Heusen Slim Fit Shirt combines modern tailoring with quality materials for a sharp appearance.,3
+220,Van Heusen Slim Fit Shirt - Black,2199,Van Heusen,Black,Clothing,Shirts,Van Heusen Slim Fit Shirt combines modern tailoring with quality materials for a sharp appearance.,3
+221,Van Heusen Executive Formal Shirt - Red,2299,Van Heusen,Red,Clothing,Shirts,"Van Heusen Executive Formal Shirt provides a refined style with a crisp design, ideal for professional wear.",3
+222,Van Heusen Executive Formal Shirt - Blue,2299,Van Heusen,Blue,Clothing,Shirts,"Van Heusen Executive Formal Shirt provides a refined style with a crisp design, ideal for professional wear.",4
+223,Van Heusen Executive Formal Shirt - White,2299,Van Heusen,White,Clothing,Shirts,"Van Heusen Executive Formal Shirt provides a refined style with a crisp design, ideal for professional wear.",5
+224,Van Heusen Executive Formal Shirt - Black,2299,Van Heusen,Black,Clothing,Shirts,"Van Heusen Executive Formal Shirt provides a refined style with a crisp design, ideal for professional wear.",2
+225,Park Avenue Classic Formal Shirt - Red,1499,Park Avenue,Red,Clothing,Shirts,"Park Avenue Classic Formal Shirt offers a sleek design with quality fabric, perfect for formal occasions.",2
+226,Park Avenue Classic Formal Shirt - Blue,1499,Park Avenue,Blue,Clothing,Shirts,"Park Avenue Classic Formal Shirt offers a sleek design with quality fabric, perfect for formal occasions.",2
+227,Park Avenue Classic Formal Shirt - White,1499,Park Avenue,White,Clothing,Shirts,"Park Avenue Classic Formal Shirt offers a sleek design with quality fabric, perfect for formal occasions.",2
+228,Park Avenue Classic Formal Shirt - Black,1499,Park Avenue,Black,Clothing,Shirts,"Park Avenue Classic Formal Shirt offers a sleek design with quality fabric, perfect for formal occasions.",3
+229,Park Avenue Business Shirt - Red,1599,Park Avenue,Red,Clothing,Shirts,"Park Avenue Business Shirt delivers a modern look with a comfortable fit, ideal for office wear.",5
+230,Park Avenue Business Shirt - Blue,1599,Park Avenue,Blue,Clothing,Shirts,"Park Avenue Business Shirt delivers a modern look with a comfortable fit, ideal for office wear.",2
+231,Park Avenue Business Shirt - White,1599,Park Avenue,White,Clothing,Shirts,"Park Avenue Business Shirt delivers a modern look with a comfortable fit, ideal for office wear.",3
+232,Park Avenue Business Shirt - Black,1599,Park Avenue,Black,Clothing,Shirts,"Park Avenue Business Shirt delivers a modern look with a comfortable fit, ideal for office wear.",3
+233,Park Avenue Slim Fit Shirt - Red,1699,Park Avenue,Red,Clothing,Shirts,"Park Avenue Slim Fit Shirt combines contemporary style with a precise fit, perfect for a smart look.",4
+234,Park Avenue Slim Fit Shirt - Blue,1699,Park Avenue,Blue,Clothing,Shirts,"Park Avenue Slim Fit Shirt combines contemporary style with a precise fit, perfect for a smart look.",3
+235,Park Avenue Slim Fit Shirt - White,1699,Park Avenue,White,Clothing,Shirts,"Park Avenue Slim Fit Shirt combines contemporary style with a precise fit, perfect for a smart look.",2
+236,Park Avenue Slim Fit Shirt - Black,1699,Park Avenue,Black,Clothing,Shirts,"Park Avenue Slim Fit Shirt combines contemporary style with a precise fit, perfect for a smart look.",2
+237,Peter England Formal Shirt - Red,1299,Peter England,Red,Clothing,Shirts,"Peter England Formal Shirt offers a balanced blend of style and comfort, ideal for business settings.",4
+238,Peter England Formal Shirt - Blue,1299,Peter England,Blue,Clothing,Shirts,"Peter England Formal Shirt offers a balanced blend of style and comfort, ideal for business settings.",4
+239,Peter England Formal Shirt - White,1299,Peter England,White,Clothing,Shirts,"Peter England Formal Shirt offers a balanced blend of style and comfort, ideal for business settings.",2
+240,Peter England Formal Shirt - Black,1299,Peter England,Black,Clothing,Shirts,"Peter England Formal Shirt offers a balanced blend of style and comfort, ideal for business settings.",5
+241,Peter England Casual Shirt - Red,1399,Peter England,Red,Clothing,Shirts,"Peter England Casual Shirt provides a relaxed fit with quality fabric, perfect for informal occasions.",2
+242,Peter England Casual Shirt - Blue,1399,Peter England,Blue,Clothing,Shirts,"Peter England Casual Shirt provides a relaxed fit with quality fabric, perfect for informal occasions.",3
+243,Peter England Casual Shirt - White,1399,Peter England,White,Clothing,Shirts,"Peter England Casual Shirt provides a relaxed fit with quality fabric, perfect for informal occasions.",5
+244,Peter England Casual Shirt - Black,1399,Peter England,Black,Clothing,Shirts,"Peter England Casual Shirt provides a relaxed fit with quality fabric, perfect for informal occasions.",4
+245,Peter England Slim Fit Shirt - Red,1499,Peter England,Red,Clothing,Shirts,"Peter England Slim Fit Shirt delivers a modern cut with premium materials for a sharp, stylish look.",4
+246,Peter England Slim Fit Shirt - Blue,1499,Peter England,Blue,Clothing,Shirts,"Peter England Slim Fit Shirt delivers a modern cut with premium materials for a sharp, stylish look.",4
+247,Peter England Slim Fit Shirt - White,1499,Peter England,White,Clothing,Shirts,"Peter England Slim Fit Shirt delivers a modern cut with premium materials for a sharp, stylish look.",5
+248,Peter England Slim Fit Shirt - Black,1499,Peter England,Black,Clothing,Shirts,"Peter England Slim Fit Shirt delivers a modern cut with premium materials for a sharp, stylish look.",4
+249,Dell Inspiron 15 3000 - Black,35999,Dell,Black,Electronics,Laptops,"Dell Inspiron 15 3000 offers reliable performance with an efficient processor and sleek design, available in Black.",3
+250,Dell Inspiron 15 3000 - White,35999,Dell,White,Electronics,Laptops,Dell Inspiron 15 3000 in White features a modern look with dependable performance and a vibrant display.,2
+251,Dell Vostro 14 - Black,44999,Dell,Black,Electronics,Laptops,"Dell Vostro 14 delivers professional performance with a compact design and robust build, available in Black.",3
+252,Dell Vostro 14 - White,44999,Dell,White,Electronics,Laptops,Dell Vostro 14 in White offers a stylish look with powerful features and portability.,4
+253,Dell Latitude 3410 - Black,52999,Dell,Black,Electronics,Laptops,"Dell Latitude 3410 is designed for business with enhanced security and performance, available in Black.",3
+254,Dell Latitude 3410 - White,52999,Dell,White,Electronics,Laptops,Dell Latitude 3410 in White combines robust performance with a sleek design for professional use.,3
+255,HP 15s Series Laptop - Black,37999,HP,Black,Electronics,Laptops,"HP 15s Series Laptop offers a balance of performance and style with an efficient design, available in Black.",2
+256,HP 15s Series Laptop - White,37999,HP,White,Electronics,Laptops,HP 15s Series Laptop in White delivers a modern aesthetic with reliable performance for everyday tasks.,4
+257,HP Pavilion 14 - Black,49999,HP,Black,Electronics,Laptops,"HP Pavilion 14 combines elegant design with powerful features, available in Black.",3
+258,HP Pavilion 14 - White,49999,HP,White,Electronics,Laptops,HP Pavilion 14 in White offers a sleek look with high performance and portability.,5
+259,HP Envy 13 - Black,59999,HP,Black,Electronics,Laptops,"HP Envy 13 delivers premium performance with a compact design, available in Black.",4
+260,HP Envy 13 - White,59999,HP,White,Electronics,Laptops,HP Envy 13 in White offers a refined design with top-tier performance and a stunning display.,4
+261,Lenovo IdeaPad Slim 3 - Black,33999,Lenovo,Black,Electronics,Laptops,"Lenovo IdeaPad Slim 3 features a lightweight design with efficient performance, available in Black.",1
+262,Lenovo IdeaPad Slim 3 - White,33999,Lenovo,White,Electronics,Laptops,Lenovo IdeaPad Slim 3 in White offers a modern aesthetic with reliable computing power.,3
+263,Lenovo ThinkPad E14 - Black,45999,Lenovo,Black,Electronics,Laptops,"Lenovo ThinkPad E14 is built for productivity with robust performance and security, available in Black.",5
+264,Lenovo ThinkPad E14 - White,45999,Lenovo,White,Electronics,Laptops,Lenovo ThinkPad E14 in White delivers a sleek design with business-grade features and durability.,5
+265,Lenovo Legion Y540 - Black,67999,Lenovo,Black,Electronics,Laptops,"Lenovo Legion Y540 offers high-performance gaming capabilities with a striking design, available in Black.",3
+266,Lenovo Legion Y540 - White,67999,Lenovo,White,Electronics,Laptops,Lenovo Legion Y540 in White combines powerful gaming performance with a stylish finish.,3
+267,Asus VivoBook 15 - Black,32999,Asus,Black,Electronics,Laptops,"Asus VivoBook 15 delivers versatile performance with a slim design, available in Black.",4
+268,Asus VivoBook 15 - White,32999,Asus,White,Electronics,Laptops,Asus VivoBook 15 in White offers a modern design with efficient performance and portability.,5
+269,Asus ZenBook 14 - Black,54999,Asus,Black,Electronics,Laptops,"Asus ZenBook 14 combines elegance with powerful features, available in Black.",3
+270,Asus ZenBook 14 - White,54999,Asus,White,Electronics,Laptops,Asus ZenBook 14 in White delivers a premium design with robust performance and a sleek profile.,2
+271,Asus ROG Strix G15 - Black,75999,Asus,Black,Electronics,Laptops,"Asus ROG Strix G15 offers high-end gaming performance with advanced cooling, available in Black.",1
+272,Asus ROG Strix G15 - White,75999,Asus,White,Electronics,Laptops,Asus ROG Strix G15 in White provides powerful graphics and cutting-edge design for gamers.,5
+273,Samsung Galaxy M32 - Blue,15999,Samsung,Blue,Electronics,Smartphones,Samsung Galaxy M32 in Blue features a sleek design with dynamic performance.,2
+274,Samsung Galaxy M32 - White,15999,Samsung,White,Electronics,Smartphones,Samsung Galaxy M32 in White delivers a modern look with reliable functionality.,5
+275,Samsung Galaxy M32 - Black,15999,Samsung,Black,Electronics,Smartphones,Samsung Galaxy M32 in Black offers a bold design with excellent performance.,3
+276,Samsung Galaxy A52 - Blue,24999,Samsung,Blue,Electronics,Smartphones,Samsung Galaxy A52 in Blue offers a balanced mix of style and functionality.,5
+277,Samsung Galaxy A52 - White,24999,Samsung,White,Electronics,Smartphones,Samsung Galaxy A52 in White delivers a refined design with top-notch features.,5
+278,Samsung Galaxy A52 - Black,24999,Samsung,Black,Electronics,Smartphones,Samsung Galaxy A52 in Black combines sleek aesthetics with powerful performance.,2
+279,Samsung Galaxy S21 FE - Blue,49999,Samsung,Blue,Electronics,Smartphones,Samsung Galaxy S21 FE in Blue delivers premium features with a striking design.,4
+280,Samsung Galaxy S21 FE - White,49999,Samsung,White,Electronics,Smartphones,"Samsung Galaxy S21 FE in White features a sleek, modern design with top-tier performance.",3
+281,Samsung Galaxy S21 FE - Black,49999,Samsung,Black,Electronics,Smartphones,Samsung Galaxy S21 FE in Black provides an elegant finish with powerful specifications.,3
+282,Xiaomi Redmi Note 10 - Blue,12999,Xiaomi,Blue,Electronics,Smartphones,Xiaomi Redmi Note 10 in Blue offers a balanced design with strong battery life.,2
+283,Xiaomi Redmi Note 10 - White,12999,Xiaomi,White,Electronics,Smartphones,Xiaomi Redmi Note 10 in White features a clean design with powerful performance.,3
+284,Xiaomi Redmi Note 10 - Black,12999,Xiaomi,Black,Electronics,Smartphones,Xiaomi Redmi Note 10 in Black combines modern style with efficient processing.,2
+285,Xiaomi Redmi 9 Prime - Blue,10999,Xiaomi,Blue,Electronics,Smartphones,Xiaomi Redmi 9 Prime in Blue provides a stylish design with reliable features.,4
+286,Xiaomi Redmi 9 Prime - White,10999,Xiaomi,White,Electronics,Smartphones,Xiaomi Redmi 9 Prime in White delivers a sleek look with efficient functionality.,1
+287,Xiaomi Redmi 9 Prime - Black,10999,Xiaomi,Black,Electronics,Smartphones,Xiaomi Redmi 9 Prime in Black features a modern design with dependable performance.,4
+288,Xiaomi Mi 11X - Blue,29999,Xiaomi,Blue,Electronics,Smartphones,Xiaomi Mi 11X in Blue delivers high performance with an elegant design.,3
+289,Xiaomi Mi 11X - White,29999,Xiaomi,White,Electronics,Smartphones,Xiaomi Mi 11X in White features a sleek finish with advanced processing power.,5
+290,Xiaomi Mi 11X - Black,29999,Xiaomi,Black,Electronics,Smartphones,Xiaomi Mi 11X in Black provides a refined design with superior performance.,4
+291,OnePlus Nord CE 5G - Blue,29999,OnePlus,Blue,Electronics,Smartphones,OnePlus Nord CE 5G in Blue delivers high-speed performance with a modern design.,2
+292,OnePlus Nord CE 5G - White,29999,OnePlus,White,Electronics,Smartphones,OnePlus Nord CE 5G in White features a sleek design and advanced 5G technology.,2
+293,OnePlus Nord CE 5G - Black,29999,OnePlus,Black,Electronics,Smartphones,OnePlus Nord CE 5G in Black combines premium design with cutting-edge connectivity.,3
+294,OnePlus 9R - Blue,39999,OnePlus,Blue,Electronics,Smartphones,OnePlus 9R in Blue features a dynamic design and robust performance.,3
+295,OnePlus 9R - White,39999,OnePlus,White,Electronics,Smartphones,"OnePlus 9R in White delivers a sleek, modern aesthetic with high-speed performance.",3
+296,OnePlus 9R - Black,39999,OnePlus,Black,Electronics,Smartphones,OnePlus 9R in Black provides an elegant finish with cutting-edge features.,2
+297,OnePlus 8T - Blue,44999,OnePlus,Blue,Electronics,Smartphones,OnePlus 8T in Blue delivers powerful processing and a refined design.,3
+298,OnePlus 8T - White,44999,OnePlus,White,Electronics,Smartphones,OnePlus 8T in White features a modern look with efficient performance.,4
+299,OnePlus 8T - Black,44999,OnePlus,Black,Electronics,Smartphones,"OnePlus 8T in Black combines robust features with a sleek, stylish finish.",4
+300,Realme 8 Pro - Blue,19999,Realme,Blue,Electronics,Smartphones,Realme 8 Pro in Blue delivers a balanced performance with a vibrant display.,2
+301,Realme 8 Pro - White,19999,Realme,White,Electronics,Smartphones,Realme 8 Pro in White features a sleek design and advanced camera capabilities.,2
+302,Realme 8 Pro - Black,19999,Realme,Black,Electronics,Smartphones,Realme 8 Pro in Black offers robust performance with a premium finish.,4
+303,Realme Narzo 30 Pro - Blue,17999,Realme,Blue,Electronics,Smartphones,Realme Narzo 30 Pro in Blue offers dynamic performance with a modern design.,4
+304,Realme Narzo 30 Pro - White,17999,Realme,White,Electronics,Smartphones,Realme Narzo 30 Pro in White features a clean aesthetic with efficient performance.,4
+305,Realme Narzo 30 Pro - Black,17999,Realme,Black,Electronics,Smartphones,Realme Narzo 30 Pro in Black provides a sleek look with powerful processing.,4
+306,Realme GT Master Edition - Blue,26999,Realme,Blue,Electronics,Smartphones,Realme GT Master Edition in Blue delivers high-speed performance with a modern finish.,3
+307,Realme GT Master Edition - White,26999,Realme,White,Electronics,Smartphones,Realme GT Master Edition in White features a premium design with advanced features.,2
+308,Realme GT Master Edition - Black,26999,Realme,Black,Electronics,Smartphones,Realme GT Master Edition in Black combines cutting-edge technology with a sleek design.,2
+309,Bose QuietComfort 35 II - Blue,24999,Bose,Blue,Electronics,Headphones,Bose QuietComfort 35 II in Blue offers premium sound quality and a comfortable design.,4
+310,Bose QuietComfort 35 II - White,24999,Bose,White,Electronics,Headphones,Bose QuietComfort 35 II in White features advanced noise cancellation with a stylish finish.,4
+311,Bose QuietComfort 35 II - Black,24999,Bose,Black,Electronics,Headphones,Bose QuietComfort 35 II in Black provides immersive audio and exceptional comfort.,4
+312,Bose SoundLink Around Ear - Blue,19999,Bose,Blue,Electronics,Headphones,Bose SoundLink Around Ear in Blue delivers balanced audio and a modern design.,4
+313,Bose SoundLink Around Ear - White,19999,Bose,White,Electronics,Headphones,Bose SoundLink Around Ear in White features a sleek design with powerful sound.,4
+314,Bose SoundLink Around Ear - Black,19999,Bose,Black,Electronics,Headphones,Bose SoundLink Around Ear in Black provides a stylish look with excellent audio performance.,3
+315,Bose QuietComfort Earbuds - Blue,21999,Bose,Blue,Electronics,Headphones,Bose QuietComfort Earbuds in Blue offer premium audio with a comfortable fit.,4
+316,Bose QuietComfort Earbuds - White,21999,Bose,White,Electronics,Headphones,Bose QuietComfort Earbuds in White combine style with advanced sound technology.,4
+317,Bose QuietComfort Earbuds - Black,21999,Bose,Black,Electronics,Headphones,Bose QuietComfort Earbuds in Black provide superior audio performance and a sleek design.,4
+318,Sony WH-1000XM4 - Blue,24990,Sony,Blue,Electronics,Headphones,Sony WH-1000XM4 in Blue delivers exceptional audio quality with advanced features.,4
+319,Sony WH-1000XM4 - White,24990,Sony,White,Electronics,Headphones,Sony WH-1000XM4 in White features a modern design with cutting-edge noise cancellation.,2
+320,Sony WH-1000XM4 - Black,24990,Sony,Black,Electronics,Headphones,Sony WH-1000XM4 in Black provides superior sound quality with sleek aesthetics.,4
+321,Sony WF-1000XM4 - Blue,21990,Sony,Blue,Electronics,Headphones,Sony WF-1000XM4 in Blue delivers high-quality audio and a compact design.,2
+322,Sony WF-1000XM4 - White,21990,Sony,White,Electronics,Headphones,Sony WF-1000XM4 in White features premium sound with a minimalist design.,3
+323,Sony WF-1000XM4 - Black,21990,Sony,Black,Electronics,Headphones,Sony WF-1000XM4 in Black offers excellent sound quality with modern features.,2
+324,Sony MDR-XB950B1 - Blue,8499,Sony,Blue,Electronics,Headphones,Sony MDR-XB950B1 in Blue offers dynamic audio performance with a robust design.,5
+325,Sony MDR-XB950B1 - White,8499,Sony,White,Electronics,Headphones,Sony MDR-XB950B1 in White features vibrant sound and a stylish finish.,2
+326,Sony MDR-XB950B1 - Black,8499,Sony,Black,Electronics,Headphones,Sony MDR-XB950B1 in Black provides deep bass and crisp audio quality.,2
+327,JBL Tune 750BTNC - Blue,6999,JBL,Blue,Electronics,Headphones,JBL Tune 750BTNC in Blue delivers clear audio with a comfortable design.,2
+328,JBL Tune 750BTNC - White,6999,JBL,White,Electronics,Headphones,JBL Tune 750BTNC in White features modern noise cancellation with crisp sound.,4
+329,JBL Tune 750BTNC - Black,6999,JBL,Black,Electronics,Headphones,JBL Tune 750BTNC in Black provides balanced sound and effective noise reduction.,2
+330,JBL Live 650BTNC - Blue,12999,JBL,Blue,Electronics,Headphones,JBL Live 650BTNC in Blue offers rich audio quality with a sleek design.,5
+331,JBL Live 650BTNC - White,12999,JBL,White,Electronics,Headphones,JBL Live 650BTNC in White features advanced noise cancellation and premium sound.,5
+332,JBL Live 650BTNC - Black,12999,JBL,Black,Electronics,Headphones,JBL Live 650BTNC in Black provides powerful audio performance with modern aesthetics.,5
+333,JBL Quantum 800 - Blue,13999,JBL,Blue,Electronics,Headphones,JBL Quantum 800 in Blue delivers immersive sound with a comfortable design.,2
+334,JBL Quantum 800 - White,13999,JBL,White,Electronics,Headphones,JBL Quantum 800 in White features dynamic audio and a sleek gaming style.,4
+335,JBL Quantum 800 - Black,13999,JBL,Black,Electronics,Headphones,JBL Quantum 800 in Black provides powerful sound and modern connectivity.,4
+336,Sennheiser HD 450BT - Blue,11999,Sennheiser,Blue,Electronics,Headphones,Sennheiser HD 450BT in Blue offers balanced audio with a comfortable design.,4
+337,Sennheiser HD 450BT - White,11999,Sennheiser,White,Electronics,Headphones,Sennheiser HD 450BT in White features advanced noise cancellation and crisp sound.,3
+338,Sennheiser HD 450BT - Black,11999,Sennheiser,Black,Electronics,Headphones,Sennheiser HD 450BT in Black provides superior sound quality with sleek design.,4
+339,Sennheiser Momentum 3 - Blue,29990,Sennheiser,Blue,Electronics,Headphones,Sennheiser Momentum 3 in Blue delivers rich audio with a luxurious finish.,3
+340,Sennheiser Momentum 3 - White,29990,Sennheiser,White,Electronics,Headphones,Sennheiser Momentum 3 in White features advanced audio technology with elegant design.,2
+341,Sennheiser Momentum 3 - Black,29990,Sennheiser,Black,Electronics,Headphones,"Sennheiser Momentum 3 in Black provides exceptional sound with a stylish, modern look.",3
+342,Sennheiser CX 400BT - Blue,7999,Sennheiser,Blue,Electronics,Headphones,Sennheiser CX 400BT in Blue delivers high-quality audio and sleek design.,3
+343,Sennheiser CX 400BT - White,7999,Sennheiser,White,Electronics,Headphones,Sennheiser CX 400BT in White features a modern design with crisp sound clarity.,2
+344,Sennheiser CX 400BT - Black,7999,Sennheiser,Black,Electronics,Headphones,Sennheiser CX 400BT in Black provides robust wireless performance with a stylish finish.,3

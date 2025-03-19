@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+.carousal{
+  width: 100%; /* Ensure it takes up the full width */
+  /* height: 300px; /* Set the height  */
+  object-fit:contain; /* Ensures the image fills the container while maintaining aspect ratio */
+  object-position: center; /* Centers the image */ 
+
+  height: 400px;
+  aspect-ratio: 16/9; /* Set aspect ratio as per your image size */       
+} 
+
+
+
