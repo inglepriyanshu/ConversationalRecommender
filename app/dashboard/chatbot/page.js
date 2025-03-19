@@ -3,20 +3,97 @@
 import { useState, useEffect, useRef } from 'react';
 import { Send, Loader2 } from 'lucide-react';
 import ProductCard from '@/app/components/ProductCard';
-
+import Image from 'next/image';
 
 let index = 0;
+
+const INITIAL_BOT_MESSAGE = {
+  sender: 'bot',
+  text: 'How can I help you today?'
+};
+
+const initialPrompts = [
+  "Hmm, based on your requirements, I would suggest these products for you.",
+  "Sounds good, I picked these products for you based on your requirements.",
+  "Great, here are some products that match your preferences.",
+  "Alright, I've found some products that align with what you're looking for.",
+  "Based on your input, here are some recommendations for you.",
+  "Excellent, I have selected some products that might interest you."
+];
+
+const updatePrompts = [
+  "Hmm, based on your changes in requirements, I think these products are suitable.",
+  "Alright, I've updated the recommendations based on your new preferences.",
+  "Got it, here are some revised product suggestions for you.",
+  "I see your changes; these updated products should better match your needs.",
+  "Thanks for the update! I've reselected some products that fit your revised criteria.",
+  "Based on your latest input, here are some new recommendations.",
+  "Understood, I've refreshed the list of products according to your changes.",
+  "Sure, here are some updated product picks that align with your new requirements.",
+  "Okay, I've adjusted the recommendations based on your changes.",
+  "Let me show you some updated product suggestions based on your revised preferences."
+];
 
 const Chatbot = () => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isResetting, setIsResetting] = useState(false);
   const chatEndRef = useRef(null);
+  const mainRef = useRef(null);
+
+  // Load saved messages and index on initial mount
+  useEffect(() => {
+    const savedMessages = localStorage.getItem('chatMessages');
+    const savedIndex = localStorage.getItem('chatIndex');
+    
+    if (savedMessages) {
+      setMessages(JSON.parse(savedMessages));
+    } else {
+      setMessages([INITIAL_BOT_MESSAGE]);
+    }
+    
+    if (savedIndex) {
+      index = parseInt(savedIndex);
+    }
+  }, []);
+
+  // Save messages and index when they change
+  useEffect(() => {
+    if (messages.length > 0) {
+      localStorage.setItem('chatMessages', JSON.stringify(messages));
+      localStorage.setItem('chatIndex', index.toString());
+    }
+  }, [messages]);
 
   // Auto-scroll to the latest message
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (chatEndRef.current && mainRef.current) {
+      mainRef.current.scrollTop = mainRef.current.scrollHeight;
+    }
   }, [messages]);
+
+  const handleReset = () => {
+    setIsResetting(true);
+    
+    // Add woosh animation class to main content
+    if (mainRef.current) {
+      mainRef.current.classList.add('animate-woosh');
+    }
+
+    // After animation completes
+    setTimeout(() => {
+      setMessages([INITIAL_BOT_MESSAGE]);
+      index = 0;
+      localStorage.setItem('chatMessages', JSON.stringify([INITIAL_BOT_MESSAGE]));
+      localStorage.setItem('chatIndex', '0');
+      setIsResetting(false);
+      
+      if (mainRef.current) {
+        mainRef.current.classList.remove('animate-woosh');
+      }
+    }, 500);
+  };
 
   // Modified: fetch product details and return them
   const fetchRecommendedProducts = async (productIds) => {
@@ -42,6 +119,7 @@ const Chatbot = () => {
     const userMessage = { sender: 'user', text: input };
     setMessages((prev) => [...prev, userMessage]);
     const currentMessage = input;
+    const currentIndex = index; // Store current index before incrementing
     setInput('');
     setLoading(true);
 
@@ -54,7 +132,7 @@ const Chatbot = () => {
       const data = await response.json();
       console.log(data);
       console.log(index);
-      index++;
+      index++; // Increment index after storing current value
 
       let products = [];
       if (data.product_ids && data.product_ids.length > 0) {
@@ -63,7 +141,9 @@ const Chatbot = () => {
 
       const botMessage = { 
         sender: 'bot', 
-        text: data.reply,
+        text: currentIndex === 0  // Use stored index value for checking
+          ? initialPrompts[Math.floor(Math.random() * initialPrompts.length)]
+          : updatePrompts[Math.floor(Math.random() * updatePrompts.length)],
         products: products 
       };
       setMessages((prev) => [...prev, botMessage]);
@@ -79,13 +159,28 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto flex flex-col h-screen bg-gradient-to-br from-gray-50 to-white p-6">
-      <header className="text-center mb-4">
+    <div className="max-w-3xl mx-auto flex flex-col h-[90vh] bg-gradient-to-br from-gray-50 to-white p-4">
+      <header className="text-center mb-2 relative">
         <h1 className="text-4xl font-extrabold text-gray-800">Cart Curator</h1>
-        <p className="mt-1 text-gray-500">How can we help you today?</p>
+        <button
+          onClick={handleReset}
+          disabled={isResetting}
+          className="absolute right-0 top-1/2 -translate-y-1/2 p-2 hover:bg-gray-100 rounded-full transition-all duration-200"
+        >
+          <Image
+            src="/reload.png"
+            alt="Reset Chat"
+            width={24}
+            height={24}
+            className={`transition-transform duration-500 ${isResetting ? 'animate-spin' : 'hover:rotate-180'}`}
+          />
+        </button>
       </header>
 
-      <main className="flex-grow bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 rounded-lg shadow-md p-6 overflow-y-auto space-y-4">
+      <main
+        ref={mainRef}
+        className="flex-grow bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 rounded-lg shadow-md p-4 overflow-y-auto space-y-3 transition-all duration-500 scroll-smooth max-h-[calc(90vh-140px)]"
+      >
         {messages.map((msg, idx) => (
           <div key={idx}>
             <div
@@ -118,10 +213,10 @@ const Chatbot = () => {
             <Loader2 className="h-6 w-6 text-gray-600 animate-spin" />
           </div>
         )}
-        <div ref={chatEndRef} />
+        <div ref={chatEndRef} className="h-0" />
       </main>
 
-      <form className="mt-4 flex items-center space-x-2" onSubmit={handleSend}>
+      <form className="mt-2 flex items-center space-x-2" onSubmit={handleSend}>
         <input
           type="text"
           placeholder="Type your message..."
