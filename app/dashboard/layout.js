@@ -1,4 +1,3 @@
-
 import { Geist, Geist_Mono } from "next/font/google";
 import './style.css'
 import DashboardNavbar from "../components/dashboardNavbar";
@@ -19,7 +18,7 @@ const metadata = {
 
 export default function DashboardLayout({ children }) {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-pattern">
       <DashboardNavbar />
       <main className="pt-16">
         {children}

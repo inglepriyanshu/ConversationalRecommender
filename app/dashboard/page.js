@@ -3,8 +3,8 @@
 
 import Carousel from "../components/carousel";
 import ProductCard from "../components/ProductCard";
-import { useRouter } from "next/navigation";
-import { useState } from 'react';
+import { useRouter, useSearchParams } from "next/navigation";
+import { useState, useEffect } from 'react';
 
 // Static categories with sub-categories
 const categories = [
@@ -15,7 +15,28 @@ const categories = [
 
 const mainDashboard = () => {
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const searchQuery = searchParams.get('search') || ""; // Get search query from URL
     const [expandedCategory, setExpandedCategory] = useState(null);
+    const [products, setProducts] = useState([]); // All products
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                let response = await fetch('http://localhost:3000/api/getProducts');
+                let data = await response.json();
+                console.log("Fetched products data:", data);
+                if (data.result) {
+                    setProducts(data.data);
+                } else {
+                    console.log("No products found.");
+                }
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        }
+        fetchData();
+    }, []);
 
     const toggleCategory = (categoryName) => {
         setExpandedCategory(expandedCategory === categoryName ? null : categoryName);
@@ -31,7 +52,7 @@ const mainDashboard = () => {
                 <Carousel />
             </div>
             <div className="flex gap-4">
-                <aside className="p-4 w-64 bg-gray-200 rounded-md">
+                <aside className="p-4 w-64 bg-gray-200 rounded-md border-l">
                     <h1 className="text-xl font-bold text-gray-800 mb-4">Categories</h1>
                     <ul>
                         {categories.map(cat => (
@@ -64,8 +85,12 @@ const mainDashboard = () => {
                         ))}
                     </ul>
                 </aside>
-                <main className="w-full bg-gradient-to-r from-blue-300 to-green-200 border rounded-md p-4">
-                    <ProductCard />
+                <main className="w-full bg-gradient-to-r from-blue-300 to-green-200 border rounded-md p-4 ml-2 mr-6">
+                    <ProductCard 
+                        searchQuery={searchQuery} 
+                        products={products} 
+                        categoryOrder={categories.map(cat => cat.name)}
+                    />
                 </main>
             </div>            
         </div>

@@ -40,6 +40,32 @@ const CartPage = () => {
 
     }
 
+    const Handle_RemoveFromCart = async (product) => {
+        const cartId = localStorage.getItem('cartId');
+        try {
+            let response = await fetch('http://localhost:3000/api/removeFromCart', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ cartId, product })
+            });
+
+            response = await response.json();
+
+            if (response.success) {
+                toast.success("Item removed from cart successfully!");
+                // Update the products state to reflect the removed item
+                setProducts(products.filter((p) => p.product_id !== product.product_id));
+            } else {
+                toast.error(response.message || "Error while removing item from cart.");
+            }
+        } catch (error) {
+            console.error("Error during removing item from cart:", error);
+            toast.error("Error, Please try again later.");
+        }
+    };
+
 
     useEffect(() => {
 
@@ -88,7 +114,7 @@ const CartPage = () => {
             ) : (
                 <div className="grid grid-cols-1 gap-4">
                     {products.map((product) => (
-                        <div key={product.product_id} className="bg-white p-4 rounded-lg shadow-md flex items-center justify-between">
+                        <div key={product.product_id} className="bg-white p-4 rounded-lg shadow-md flex items-center justify-between relative" style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             <div className="flex items-center flex-1">
                                 <img 
                                     src={`/thumbnail/${product.product_id}.jpeg`}
@@ -98,21 +124,29 @@ const CartPage = () => {
                                 <div className="flex flex-col flex-1">
                                     <div className="flex justify-between items-center mb-2">
                                         <h3 className="text-lg font-semibold text-[#064420]">{product.product_title}</h3>
-                                        <p className="text-gray-500">
-                                            {product.rating} <span className="text-green-600 text-xl">★</span>
-                                        </p>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <p className="text-gray-800 text-lg font-medium">Rs.{product.price}</p>
-                                        <button 
-                                            className="bg-[#1E3A8A] text-[#FFD700] px-4 py-2 rounded-lg hover:bg-[#1E3A9A] transition-colors"
-                                            onClick={() => Handle_BuyNow(product)}
-                                        >
-                                            Buy Now⚡
-                                        </button>
+                                        
                                     </div>
                                 </div>
                             </div>
+                            <div className="flex flex-col items-start">
+                                <button 
+                                    className="bg-[#1E3A8A] text-[#FFD700] px-4 py-2 rounded-lg hover:bg-[#1E3A9A] transition-colors mt-2 mr-auto"
+                                    onClick={() => Handle_BuyNow(product)}
+                                >
+                                    Buy Now⚡
+                                </button>
+                            </div>
+                            <button
+                                className="absolute top-2 right-2 text-black font-bold rounded-full h-8 w-8 flex items-center justify-center hover:bg-red-100 transition-colors"
+                                onClick={() => Handle_RemoveFromCart(product)}
+                                aria-label="Remove item"
+                                style={{ position: 'absolute', top: '0.5rem', right: '0.5rem' }}
+                            >
+                                <span style={{ fontSize: '20px' }}>❌</span>
+                            </button>
                         </div>
                     ))}
                 </div>

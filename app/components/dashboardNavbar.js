@@ -2,14 +2,14 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Search, ShoppingCart, User, LogOut } from 'lucide-react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 export default function DashboardNavbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [details, setDetails] = useState(null);
   const pathName = usePathname();
   const router = useRouter();
-
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     const data = localStorage.getItem("userData");    
@@ -38,6 +38,20 @@ export default function DashboardNavbar() {
     router.push("/authentication");
   };
 
+  const handleSearchChange = (e) => {
+    const newSearchQuery = e.target.value;
+    setSearchQuery(newSearchQuery);
+
+    const params = new URLSearchParams(searchParams);
+    if (newSearchQuery) {
+      params.set('search', newSearchQuery);
+    } else {
+      params.delete('search');
+    }
+
+    router.push(`/dashboard?${params.toString()}`);
+  };
+
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-2 ">
@@ -61,7 +75,7 @@ export default function DashboardNavbar() {
                          shadow-sm placeholder:text-gray-400"
                 placeholder="What you want today..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={handleSearchChange}
               />
             </div>
           </div>
@@ -96,7 +110,8 @@ export default function DashboardNavbar() {
             </button> 
              
             <Link href='/dashboard/chatbot'>
-              <img  src='/images/google-gemini-icon.svg' alt='icon' className='w-10 h-8 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors' />
+              {/* <img  src='/images/google-gemini-icon.svg' alt='icon' className='w-10 h-8 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors' /> */}
+              <img  src='/ai_loading.gif' alt='icon' className='w-8 h-8 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors' />
             </Link>
           </div>
         </div>

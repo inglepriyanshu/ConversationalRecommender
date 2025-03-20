@@ -159,9 +159,9 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto flex flex-col h-[90vh] bg-gradient-to-br from-gray-50 to-white p-4">
+    <div className="max-w-3xl mx-auto flex flex-col h-[90vh] bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-gray-200/50 my-4">
       <header className="text-center mb-2 relative">
-        <h1 className="text-4xl font-extrabold text-gray-800">Cart Curator</h1>
+        <h1 className="text-4xl font-extrabold bg-gradient-to-r from-green-600 to-green-500 inline-block text-transparent bg-clip-text">Cart Curator</h1>
         <button
           onClick={handleReset}
           disabled={isResetting}
@@ -179,25 +179,32 @@ const Chatbot = () => {
 
       <main
         ref={mainRef}
-        className="flex-grow bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 rounded-lg shadow-md p-4 overflow-y-auto space-y-3 transition-all duration-500 scroll-smooth max-h-[calc(90vh-140px)]"
+        className="flex-grow bg-gradient-to-br from-green-50/50 to-gray-50/50 rounded-lg shadow-md p-4 overflow-y-auto space-y-3 transition-all duration-500 scroll-smooth max-h-[calc(90vh-140px)] border border-gray-200"
       >
         {messages.map((msg, idx) => (
           <div key={idx}>
-            <div
-              className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
+            <div className={`flex items-start gap-2 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+              {msg.sender === 'bot' && (
+                <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 bg-green-100">
+                  <img 
+                    src="/ai_chat_loading.gif"
+                    alt="Bot"
+                    className="w-full h-full object-cover animate-fadeIn"
+                  />
+                </div>
+              )}
               <div
-                className={`px-4 py-3 rounded-xl max-w-md text-sm transition-all duration-200 ${
+                className={`px-4 py-2 rounded-2xl max-w-md text-sm ${
                   msg.sender === 'user'
-                    ? 'bg-green-500 text-white shadow-lg'
-                    : 'bg-yellow-200 text-gray-800 shadow'
+                    ? 'bg-green-500 text-white rounded-tr-none'
+                    : 'bg-white border border-gray-200 shadow-sm rounded-tl-none'
                 }`}
               >
                 {msg.text}
               </div>
             </div>
             {msg.sender === 'bot' && msg.products && msg.products.length > 0 && (
-              <div className="mt-4 mb-6">
+              <div className="mt-4 mb-6 ml-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                   {msg.products.map((prod, pidx) => (
                     <ProductCard key={pidx} product={prod} />
@@ -209,24 +216,33 @@ const Chatbot = () => {
         ))}
 
         {loading && (
-          <div className="flex justify-start">
-            <Loader2 className="h-6 w-6 text-gray-600 animate-spin" />
+          <div className="flex items-start gap-2">
+            <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 animate-slideIn">
+              <Image
+                src="/ai_chat_loading.gif"
+                alt="Loading..."
+                width={32}
+                height={32}
+                className="w-full h-full"
+              />
+            </div>
+            <div className="bg-gray-100 w-12 h-6 rounded-full animate-pulse"/>
           </div>
         )}
         <div ref={chatEndRef} className="h-0" />
       </main>
 
-      <form className="mt-2 flex items-center space-x-2" onSubmit={handleSend}>
+      <form className="mt-4 px-4 pb-4 flex items-center gap-2" onSubmit={handleSend}>
         <input
           type="text"
           placeholder="Type your message..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="flex-grow p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+          className="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition bg-white"
         />
         <button
           type="submit"
-          className="p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-r-lg flex items-center justify-center transition"
+          className="p-3 bg-green-500 hover:bg-green-600 text-white rounded-lg flex items-center justify-center transition-colors flex-shrink-0"
         >
           <Send className="h-5 w-5" />
         </button>
