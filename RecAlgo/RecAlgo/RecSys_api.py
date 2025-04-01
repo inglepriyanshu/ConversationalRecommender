@@ -9,15 +9,14 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
-
+import time
+from datetime import datetime
 
 load_dotenv()
 primary_api_key = os.getenv("PRIMARY_API_KEY")
 fallback_api_key = os.getenv("FALLBACK_API_KEY")
 
-
-df = pd.read_csv(r"D:\My Engineering\TE_MiniProject\EcommWebApp-main_v2_priyanshu\EcommWebApp-main\RecAlgo\RecAlgo\NewDataset2_reindexed.csv")
-
+df = pd.read_csv("NewDataset2_reindexed.csv")
 
 current_structured_query = " "
 taxonomy = {
@@ -151,6 +150,9 @@ class QueryRequest(BaseModel):
 
 @app.post("/query")
 def query_products(request: QueryRequest):
+    start_time = time.time()
+    print(f"\n[{datetime.now()}] Starting product query processing")
+    
     global current_structured_query
     if request.index == 0:
         initial_prompt = create_initial_prompt(request.prompt)
@@ -160,10 +162,20 @@ def query_products(request: QueryRequest):
         structured_query = create_structured_query(update_prompt)
     
     current_structured_query = structured_query
+    
+    filter_start = time.time()
     result_df = filter_products(structured_query)
+    filter_time = time.time() - filter_start
+    print(f"[{datetime.now()}] Product filtering took {filter_time:.2f} seconds")
+    
+    total_time = time.time() - start_time
+    print(f"[{datetime.now()}] Total query processing took {total_time:.2f} seconds")
     return {"product_ids": result_df["product_id"].tolist()}
 
 def send_query(model, content):
+    start_time = time.time()
+    print(f"\n[{datetime.now()}] Starting query with model: {model}")
+    
     primary_key = f"Bearer {primary_api_key}"
     fallback_key = f"Bearer {fallback_api_key}"
     url = "https://openrouter.ai/api/v1/chat/completions"
@@ -185,27 +197,45 @@ def send_query(model, content):
     }
     
     try:
+        print(f"[{datetime.now()}] Trying Primary API key with model: {model}")
+        request_start = time.time()
         response = requests.post(url, headers=headers_primary, data=payload)
+        request_time = time.time() - request_start
+        print(f"[{datetime.now()}] Request took {request_time:.2f} seconds")
+        
         if response.status_code != 200:
-            print("Primary API key failed with status code:", response.status_code)
+            print(f"[{datetime.now()}] Primary API key failed with status code:", response.status_code)
             try:
                 error_info = response.json()
-                print("Error details:", error_info)
+                print(f"[{datetime.now()}] Error details:", error_info)
             except Exception:
-                print("No JSON error details available.")
+                print(f"[{datetime.now()}] No JSON error details available.")
             raise Exception("Primary key request failed")
         else:
+            print(f"[{datetime.now()}] Successfully used Primary API key")
+            total_time = time.time() - start_time
+            print(f"[{datetime.now()}] Total operation took {total_time:.2f} seconds")
             return response
     except Exception as e:
-        print("Primary API key encountered an error:", e)
-        print("Falling back to secondary API key.")
+        print(f"[{datetime.now()}] Primary API key encountered an error:", e)
+        print(f"\n[{datetime.now()}] Falling back to secondary API key with model:", model)
+        request_start = time.time()
         response = requests.post(url, headers=headers_fallback, data=payload)
+        request_time = time.time() - request_start
+        print(f"[{datetime.now()}] Fallback request took {request_time:.2f} seconds")
+        
         if response.status_code != 200:
-            print("Fallback API key also failed with status code:", response.status_code)
+            print(f"[{datetime.now()}] Fallback API key also failed with status code:", response.status_code)
             raise Exception("Both API keys failed")
+        print(f"[{datetime.now()}] Successfully used Fallback API key")
+        total_time = time.time() - start_time
+        print(f"[{datetime.now()}] Total operation took {total_time:.2f} seconds")
         return response
 
 def create_structured_query(content):
+    start_time = time.time()
+    print(f"\n[{datetime.now()}] Starting structured query creation")
+    
     model1 = "qwen/qwen-2.5-72b-instruct:free"
     model2 = "microsoft/phi-3-medium-128k-instruct:free"
     model3 = "meta-llama/llama-3-8b-instruct:free"
@@ -215,32 +245,57 @@ def create_structured_query(content):
         response = send_query(model1, content)
         if response.status_code == 200:
             structured_text = response.json()['choices'][0]['message']['content']
-            return json.loads(structured_text)
-    except:
-        pass
+            structured_query = json.loads(structured_text)
+            print(f"\n[{datetime.now()}] Structured Query:", json.dumps(structured_query, indent=2))
+            total_time = time.time() - start_time
+            print(f"[{datetime.now()}] Total query creation took {total_time:.2f} seconds")
+            return structured_query
+    except Exception as e:
+        print(f"[{datetime.now()}] Model 1 failed:", e)
     
     try:
         response = send_query(model2, content)
         if response.status_code == 200:
             structured_text = response.json()['choices'][0]['message']['content']
-            return json.loads(structured_text)
-    except:
-        pass
+            structured_query = json.loads(structured_text)
+            print(f"\n[{datetime.now()}] Structured Query:", json.dumps(structured_query, indent=2))
+            total_time = time.time() - start_time
+            print(f"[{datetime.now()}] Total query creation took {total_time:.2f} seconds")
+            return structured_query
+    except Exception as e:
+        print(f"[{datetime.now()}] Model 2 failed:", e)
     
     try:
         response = send_query(model3, content)
         if response.status_code == 200:
             structured_text = response.json()['choices'][0]['message']['content']
-            return json.loads(structured_text)
-    except:
-        pass
+            structured_query = json.loads(structured_text)
+            print(f"\n[{datetime.now()}] Structured Query:", json.dumps(structured_query, indent=2))
+            total_time = time.time() - start_time
+            print(f"[{datetime.now()}] Total query creation took {total_time:.2f} seconds")
+            return structured_query
+    except Exception as e:
+        print(f"[{datetime.now()}] Model 3 failed:", e)
     
     try:
+        print(f"\n[{datetime.now()}] Trying local model:", model4)
+        model_start = time.time()
         model = lms.llm(model4)
         result = model.respond(content)
-        return json.loads(result.content)
-    except:
-        return {}
+        model_time = time.time() - model_start
+        print(f"[{datetime.now()}] Local model took {model_time:.2f} seconds")
+        structured_query = json.loads(result.content)
+        print(f"\n[{datetime.now()}] Structured Query:", json.dumps(structured_query, indent=2))
+        total_time = time.time() - start_time
+        print(f"[{datetime.now()}] Total query creation took {total_time:.2f} seconds")
+        return structured_query
+    except Exception as e:
+        print(f"[{datetime.now()}] Model 4 failed:", e)
+
+    print(f"[{datetime.now()}] All models failed. Returning an empty structured query.")
+    total_time = time.time() - start_time
+    print(f"[{datetime.now()}] Total operation took {total_time:.2f} seconds")
+    return {}
 
 def filter_products(structured_query, min_candidates: int = 3):
     filtered_df = df.copy()

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Send, Loader2 } from 'lucide-react';
 import ProductCard from '@/app/components/ProductCard';
 import Image from 'next/image';
+import React from 'react'; // Import React
 
 let index = 0;
 
@@ -99,12 +100,31 @@ const Chatbot = () => {
   const fetchRecommendedProducts = async (productIds) => {
     try {
       const limitedIds = productIds.slice(0, 3);
-      const fetchedProducts = await Promise.all(
-        limitedIds.map(async (id) => {
+      
+      // Use a map to store fetched products
+      const fetchedProductsMap = new Map();
+      const productsToFetch = [];
+
+      // Filter out products that are already fetched
+      limitedIds.forEach(id => {
+        if (!fetchedProductsMap.has(id)) {
+          productsToFetch.push(id);
+        }
+      });
+
+      // Fetch the products that are not yet fetched
+      const newProducts = await Promise.all(
+        productsToFetch.map(async (id) => {
           const res = await fetch(`http://localhost:3000/api/products/${id}`);
-          return res.json();
+          const product = await res.json();
+          fetchedProductsMap.set(id, product); // Store fetched product in the map
+          return product;
         })
       );
+
+      // Combine the newly fetched products with the cached products
+      const fetchedProducts = limitedIds.map(id => fetchedProductsMap.get(id));
+
       return fetchedProducts;
     } catch (error) {
       console.error("Error fetching recommended products:", error);
@@ -172,6 +192,7 @@ const Chatbot = () => {
             alt="Reset Chat"
             width={24}
             height={24}
+            priority // Add priority attribute
             className={`transition-transform duration-500 ${isResetting ? 'animate-spin' : 'hover:rotate-180'}`}
           />
         </button>
@@ -250,5 +271,7 @@ const Chatbot = () => {
     </div>
   );
 };
+
+const ProductCardMemo = React.memo(ProductCard);
 
 export default Chatbot;

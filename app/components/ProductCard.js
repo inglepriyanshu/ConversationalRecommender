@@ -111,6 +111,8 @@ const ProductCard = ({ product, searchQuery, products, categoryOrder }) => {
         }
     };
 
+    const defaultImage = "https://images.pexels.com/photos/12725050/pexels-photo-12725050.jpeg";
+
     // If a single product prop is passed, render a simple card
     if (product) {
         console.log("Rendering single product:", product);
@@ -121,6 +123,10 @@ const ProductCard = ({ product, searchQuery, products, categoryOrder }) => {
                     alt={product?.product_title || "Product Image"}
                     className="w-full h-48 object-cover cursor-pointer"
                     onClick={() => router.push(`/dashboard/products/${product.product_id}`)}
+                    onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = defaultImage;
+                    }}
                 />
                 <div className="p-4">
                     <h3 className="text-lg font-semibold text-gray-800">
@@ -180,6 +186,10 @@ const ProductCard = ({ product, searchQuery, products, categoryOrder }) => {
                                     onClick={() => router.push(`/dashboard/products/${prod.product_id}`)}
                                     alt={prod.product_title}
                                     className="w-full h-48 object-cover cursor-pointer"
+                                    onError={(e) => {
+                                        e.target.onerror = null;
+                                        e.target.src = defaultImage;
+                                    }}
                                 />
                                 <div className="p-4">
                                     <div className="flex justify-between items-center mb-2">
@@ -217,42 +227,49 @@ const ProductCard = ({ product, searchQuery, products, categoryOrder }) => {
                         <div key={`category-${category}`} className="mb-8">
                             <h2 className="text-2xl font-bold text-gray-800 mb-4">{category}</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                                {groupedProducts[category].map(prod => (
-                                    <div 
-                                        key={generateUniqueKey(prod)}
-                                        className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
-                                    >
-                                        <img
-                                            src={`/thumbnail/${prod.product_id}.jpeg`}
-                                            onClick={() => router.push(`/dashboard/products/${prod.product_id}`)}
-                                            alt={prod.product_title}
-                                            className="w-full h-48 object-cover cursor-pointer"
-                                        />
-                                        <div className="p-4">
-                                            <div className="flex justify-between items-center mb-2">
-                                                <h3 className="text-lg font-semibold text-gray-800">{prod.product_title}</h3>
-                                                <p className="text-gray-500 flex items-center">
-                                                    {prod.rating} <span className="text-green-600 ml-1 text-xl">★</span>
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-between items-center">
-                                                <p className="text-xl text-gray-700 font-bold">Rs.{prod.price}</p>
-                                                <button
-                                                    onClick={() => Handle_addToCart(prod)}
-                                                    className="bg-green-600 hover:bg-green-700 text-white py-1 px-3 rounded-md"
-                                                >
-                                                    Add to Cart
-                                                </button>
-                                                <button
-                                                    className="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded-md"
-                                                    onClick={() => Handle_BuyNow(prod)}
-                                                >
-                                                    Buy Now ⚡
-                                                </button>
+                                {groupedProducts[category].map(prod => {
+                                    console.log("Product ID:", prod.product_id); // Log the product ID
+                                    return (
+                                        <div 
+                                            key={generateUniqueKey(prod)}
+                                            className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+                                        >
+                                            <img
+                                                src={`/thumbnail/${prod.product_id}.jpeg`}
+                                                onClick={() => router.push(`/dashboard/products/${prod.product_id}`)}
+                                                alt={prod.product_title}
+                                                className="w-full h-48 object-cover cursor-pointer"
+                                                onError={(e) => {
+                                                    e.target.onerror = null;
+                                                    e.target.src = defaultImage;
+                                                }}
+                                            />
+                                            <div className="p-4">
+                                                <div className="flex justify-between items-center mb-2">
+                                                    <h3 className="text-lg font-semibold text-gray-800">{prod.product_title}</h3>
+                                                    <p className="text-gray-500 flex items-center">
+                                                        {prod.rating} <span className="text-green-600 ml-1 text-xl">★</span>
+                                                    </p>
+                                                </div>
+                                                <div className="flex justify-between items-center">
+                                                    <p className="text-xl text-gray-700 font-bold">Rs.{prod.price}</p>
+                                                    <button
+                                                        onClick={() => Handle_addToCart(prod)}
+                                                        className="bg-green-600 hover:bg-green-700 text-white py-1 px-3 rounded-md"
+                                                    >
+                                                        Add to Cart
+                                                    </button>
+                                                    <button
+                                                        className="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded-md"
+                                                        onClick={() => Handle_BuyNow(prod)}
+                                                    >
+                                                        Buy Now ⚡
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
                     )
